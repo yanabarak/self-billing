@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/my.css">
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://use.fontawesome.com/releases/v5.11.1/css/all.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="overflow-hidden services-dash">
+    <div class="d-flex justify-content-center position-fixed w-100 h-100 flex-column bg-white" id="spinerWrap"
+        style="z-index: 10000;">
+        <div class="spinner-border mx-auto sec-color" role="status">
+            <span class="visually-hidden">Загрузка...</span>
+        </div>
+    </div>
+
+    <div class="container-fluid  d-block d-md-none">
+        <header class="d-flex align-items-center border-bottom py-2">
+            <div class="col-2 text-start">
+                <button class="navbar-toggler navbar-toggler-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <div class="animated-hamburger"><span></span><span></span><span></span></div>
+                </button>
+            </div>
+            <div class="logo col-8 justify-content-center mb-md-0">
+                <div class="col-md-6">
+                    <img src="img/checker_logo.png" alt="Company logo" class=" me-auto d-block">
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="container-fluid">
+        <div class="wrapper d-flex align-items-stretch flex-column flex-md-row">
+            <aside class="sticky-md-top">
+                <div class="sticky-top sidebar left asidebar">
+                    <div class="d-none d-md-flex  align-items-center">
+                        <button class="navbar-toggler navbar-toggler-button d-none d-md-block" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <div class="animated-hamburger open"><span></span><span></span><span></span><span></span>
+                            </div>
+                        </button>
+                        <a href="#"><i class="far fa-bell badge-notificatios fs-18 text-black"></i> </a>
+                    </div>
+                    <div class="logo-container">
+                        <img src="img/checker_logo.png" alt="Company logo" class=" d-none d-md-block logo">
+                    </div>
+                    <div id="carouselMenu" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div id="content1" class="carousel-item active">
+                                <div class="m-0 pb-3 user-menu border-bottom">
+                                    <ul class="menu-links list-group me-4">
+                                        <li class="active"><a href="main3.html"><i class="fas fa-home"></i>
+                                                <span>Home</span></a></li>
+                                        <li><a href="det_report.html"><i class="far fa-money-bill-alt"></i>
+                                                <span>Payments report</span></a></li>
+                                    </ul>
+                                </div>
+                                <div class="m-0 pb-3 pt-3 user-menu">
+                                    <ul class="menu-links list-group me-4">
+                                        <li><a href="myjobs.html"><i class="fas fa-briefcase"></i> <span>My
+                                                    Jobs</span></a></li>
+                                        <li><a href="openjobs.html"><i class="fas fa-clipboard-list"></i> <span>Open
+                                                    Jobs</span></a></li>
+                                        <li><a href="create_job.html"><i class="far fa-star"></i> <span>Create new
+                                                    job</span></a></li>
+                                        <li><a href="unfin_jobs.html"><i class="fas fa-star-half-alt"></i>
+                                                <span>Incomplete Jobs</span></a></li>
+                                        <li><a href="tel.html"><i class="fas fa-headset"></i> <span>CATI
+                                                    Studio</span></a></li>
+                                        <li><a href="location.html"><i class="fas fa-map-marker-alt"></i>
+                                                <span>Locations addresses</span></a></li>
+                                        <li><a href="ref_record.html"><i class="far fa-money-bill-alt"></i> <span>Add
+                                                    refund record</span></a></li>
+                                        <li><a href="certif.html"><i class="fas fa-stamp"></i> <span>Training &
+                                                    Certifications</span></a></li>
+                                        <li><a href="survey_history.html"><i class="fas fa-tasks"></i> <span>Jobs
+                                                    History</span></a></li>
+                                        <li><a href="files_library.html"><i class="far fa-folder-open"></i> <span>Files
+                                                    library</span></a></li>
+                                        <li><a href="tel_survey.html"><i class="fas fa-eye"></i> <span>Questionnaire
+                                                    preview</span></a></li>
+                                        <li><a href="notif.html"><i class="far fa-bell badge-notificatios"></i>
+                                                <span>Notifications</span></a></li>
+                                    </ul>
+                                </div>
+                                <div class=" border-top m-0 pt-3 user-menu mt-auto mb-0">
+                                    <ul class="menu-links list-group me-4">
+                                        <li><a href="first.html"><i class="fas fa-sign-out-alt"></i>
+                                                <span>Logout</span></a></li>
+                                        <li><a href="#" data-bs-container="body" data-bs-toggle="popover"
+                                                data-bs-trigger="focus hover click" data-bs-html="true"
+                                                data-bs-placement="top"
+                                                data-bs-content="
+                                            <span class='fw-bold'>Checker Software Systwms LTD. </span>
+                                           <br /> 1 Arba Agudot street Hadera, Israel
+                                           <br /> Phone: +972 4 622 81
+                                           <br /><span class='nowrap'>Email: info-testing-system@checker-soft.com</span>"><i
+                                                    class="fas fa-circle ellipsis"></i> <span>Company details</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="user-panel py-3 mb-0">
+                                    <a class="image d-flex align-items-center me-4" type="button"
+                                        data-bs-target="#carouselMenu" data-bs-slide="next">
+                                        <div class="box image rounded-circle">
+                                            <img src="https://picsum.photos/640/360" alt="User Image">
+                                        </div>
+                                        <h6 class="text-center mb-0 long">Larysa Chernenko
+                                            <i class="fas fa-chevron-right"></i>
+                                        </h6>
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="content2" class="carousel-item">
+                                <div class="m-0 pb-3 user-menu border-bottom">
+                                    <ul class="menu-links list-group me-4">
+                                        <li class="back"><a href="#" type="button" data-bs-target="#carouselMenu"
+                                                data-bs-slide="prev"><i class="fas fa-arrow-left opacity-100"></i>
+                                                <span>Back</span></a></li>
+                                    </ul>
+                                </div>
+                                <div class="m-0 pb-3 pt-3 user-menu ">
+                                    <ul class="menu-links list-group me-4">
+                                        <li><a href="pers_info.html"><i class="far fa-user"></i> <span>Personal
+                                                    Information</span></a></li>
+                                        <li><a href="work_hours.html"><i class="far fa-clock"></i> <span>Work
+                                                    Hours</span></a></li>
+                                        <li><a href="pref_reg.html"><i class="far fa-map"></i> <span>Preferred
+                                                    Regions</span></a></li>
+                                        <li><a href="agr.html"><i class="fas fa-file-contract"></i>
+                                                <span>Agreements</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <div class="px-3 px-md-0 py-4 mx-80 w-100" id="content">
+                <div id="infoJob">
+                    <div class="row m-0 mt-5 mt-md-0 header-wrapper d-flex align-items-center fs-22">
+                        <nav style="--bs-breadcrumb-divider: '|';" aria-label="breadcrumb" class="p-0 w-auto">
+                            <ol class="breadcrumb sec-color breadcrumb-top mb-0">
+                                <li class="breadcrumb-item"><a href="#">Services</a></li>
+                                <li class="breadcrumb-item" aria-current="page">Dashboard</li>
+                            </ol>
+                        </nav>
+                        <ul class="nav w-auto ms-auto right-nav fs-18 d-none d-md-flex">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">My cart</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Tracking</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link pe-0 active" href="#">
+                                    <svg class="icon icon-bell">
+                                        <use xlink:href="./img/services_icons.svg#icon-bell"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="nav w-auto ms-auto right-nav fs-18 d-flex d-md-none icon-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><svg class="icon icon-cart">
+                                        <use xlink:href="./img/services_icons.svg#icon-cart"></use>
+                                    </svg></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><svg class="icon icon-track">
+                                        <use xlink:href="./img/services_icons.svg#icon-track"></use>
+                                    </svg></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link pe-0" href="#">
+                                    <svg class="icon icon-bell">
+                                        <use xlink:href="./img/services_icons.svg#icon-bell"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content-wrapper m-0 p-0 mt-md-5">
+                        <ul class="nav nav-tabs tabs-line fs-18" id="services-dash" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-credit-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-credit" type="button" role="tab" aria-controls="pills-credit"
+                                    aria-selected="true">Credit</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-modules-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-modules" type="button" role="tab"
+                                    aria-controls="pills-modules" aria-selected="false">New Modules</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-monthly-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-monthly" type="button" role="tab"
+                                    aria-controls="pills-monthly" aria-selected="true">Monthly Services</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-specials-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-specials" type="button" role="tab" aria-controls="pills-home"
+                                    aria-selected="false">Special Services</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content mt-5" id="services-dashContent">
+                            <div class="tab-pane fade active show" id="pills-credit" role="tabpanel"
+                                aria-labelledby="pills-credit-tab">
+                                <div class="container p-0">
+                                    <div class="row row-cols-2 row-cols-lg-4 g-2 g-lg-4">
+                                        <div class="col">
+                                            <div class="p-0 block-wh card h-100 active">
+                                                <div class="card-header p-3 px-sm-2 px-xxl-4 d-flex align-items-center">
+                                                    <h5 class="card-title m-0 d-inline-block">Mystery Shoping</h5>
+                                                    <span class="d-inline-block ms-auto current">120/1000</span>
+                                                </div>
+                                                <div class="card-body">
+                                                    <svg class="icon icon-mystery">
+                                                        <use xlink:href="./img/services_icons.svg#icon-mystery"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="card-footer p-0">
+                                                    <div class="btn-group w-100">
+                                                        <a href="mystery_shopping.html" class="btn">Add +</a>
+                                                        <a href="#" class="btn dots"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="p-0 block-wh card h-100 active">
+                                                <div class="card-header p-3 px-sm-2 px-xxl-4 d-flex align-items-center">
+                                                    <h5 class="card-title m-0 d-inline-block">Email survey</h5>
+                                                    <span class="d-inline-block ms-auto current">50/1000</span>
+                                                </div>
+                                                <div class="card-body">
+                                                    <svg class="icon icon-email">
+                                                        <use xlink:href="./img/services_icons.svg#icon-email"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="card-footer p-0">
+                                                    <div class="btn-group w-100">
+                                                        <a href="#" class="btn">Add +</a>
+                                                        <a href="#" class="btn dots"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="p-0 block-wh card h-100">
+                                                <div class="card-header p-3 px-sm-2 px-xxl-4 d-flex align-items-center">
+                                                    <h5 class="card-title m-0 d-inline-block">Internet survey</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <svg class="icon icon-internet">
+                                                        <use xlink:href="./img/services_icons.svg#icon-internet"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="card-footer p-0">
+                                                    <div class="btn-group w-100">
+                                                        <a href="#" class="btn">Add +</a>
+                                                        <a href="#" class="btn dots"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="p-0 block-wh card h-100 active">
+                                                <div class="card-header p-3 px-sm-2 px-xxl-4 d-flex align-items-center">
+                                                    <h5 class="card-title m-0 d-inline-block">Field surveys (CAPI)</h5>
+                                                    <span class="d-inline-block ms-auto current">Tracking</span>
+                                                </div>
+                                                <div class="card-body">
+                                                    <svg class="icon icon-field">
+                                                        <use xlink:href="./img/services_icons.svg#icon-field"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="card-footer p-0">
+                                                    <div class="btn-group w-100">
+                                                        <a href="#" class="btn">Add +</a>
+                                                        <a href="#" class="btn dots"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="p-0 block-wh card h-100">
+                                                <div class="card-header p-3 px-sm-2 px-xxl-4 d-flex align-items-center">
+                                                    <h5 class="card-title m-0 d-inline-block">Telephonic survey (CATI)
+                                                    </h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <svg class="icon icon-telephonic">
+                                                        <use xlink:href="./img/services_icons.svg#icon-telephonic">
+                                                        </use>
+                                                    </svg>
+                                                </div>
+                                                <div class="card-footer p-0">
+                                                    <div class="btn-group w-100">
+                                                        <a href="#" class="btn">Add Modules +</a>
+                                                        <a href="#" class="btn dots"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="p-0 block-wh card h-100">
+                                                <div class="card-header p-3 px-sm-2 px-xxl-4 d-flex align-items-center">
+                                                    <h5 class="card-title m-0 d-inline-block">SMS/WhatsApp survey</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <svg class="icon icon-sms">
+                                                        <use xlink:href="./img/services_icons.svg#icon-sms"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="card-footer p-0">
+                                                    <div class="btn-group w-100">
+                                                        <a href="#" class="btn">Add Modules +</a>
+                                                        <a href="#" class="btn dots"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="p-0 block-wh card h-100">
+                                                <div class="card-header p-3 px-sm-2 px-xxl-4 d-flex align-items-center">
+                                                    <h5 class="card-title m-0 d-inline-block">Certifications</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <svg class="icon icon-certif">
+                                                        <use xlink:href="./img/services_icons.svg#icon-certif"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="card-footer p-0">
+                                                    <div class="btn-group w-100">
+                                                        <a href="#" class="btn">Add Modules +</a>
+                                                        <a href="#" class="btn dots"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="p-0 block-wh card h-100">
+                                                <div class="card-header p-3 px-sm-2 px-xxl-4 d-flex align-items-center">
+                                                    <h5 class="card-title m-0 d-inline-block">Retail Audit (POS)</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <svg class="icon icon-audit">
+                                                        <use xlink:href="./img/services_icons.svg#icon-audit"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="card-footer p-0">
+                                                    <div class="btn-group w-100">
+                                                        <a href="#" class="btn">Add Modules +</a>
+                                                        <a href="#" class="btn dots"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="p-0 block-wh card h-100">
+                                                <div class="card-header p-3 px-sm-2 px-xxl-4 d-flex align-items-center">
+                                                    <h5 class="card-title m-0 d-inline-block">Import Reviews</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <svg class="icon icon-import">
+                                                        <use xlink:href="./img/services_icons.svg#icon-import"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="card-footer p-0">
+                                                    <div class="btn-group w-100">
+                                                        <a href="#" class="btn">Add Modules +</a>
+                                                        <a href="#" class="btn dots"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-modules" role="tabpanel"
+                                aria-labelledby="pills-modules-tab">
+                                <div class="container p-0">
+                                    <div class="row row-cols-2 row-cols-lg-4 g-2 g-lg-4">
+                                        <div class="col">
+                                            <div class="p-0 block-wh card h-100 active">
+                                                <div class="card-header p-3 px-sm-2 px-xxl-4 d-flex align-items-center">
+                                                    <h5 class="card-title m-0 d-inline-block">Field surveys (CAPI)</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <svg class="icon icon-field">
+                                                        <use xlink:href="./img/services_icons.svg#icon-field"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="card-footer p-0">
+                                                    <div class="btn-group w-100">
+                                                        <a href="#" class="btn">Add +</a>
+                                                        <a href="#" class="btn dots"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="p-0 block-wh card h-100 active">
+                                                <div class="card-header p-3 px-sm-2 px-xxl-4 d-flex align-items-center">
+                                                    <h5 class="card-title m-0 d-inline-block">CATI Basic</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <svg class="icon icon-telephonic">
+                                                        <use xlink:href="./img/services_icons.svg#icon-telephonic">
+                                                        </use>
+                                                    </svg>
+                                                </div>
+                                                <div class="card-footer p-0">
+                                                    <div class="btn-group w-100">
+                                                        <a href="#" class="btn">Add +</a>
+                                                        <a href="#" class="btn dots"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="p-0 block-wh card h-100 active">
+                                                <div class="card-header p-3 px-sm-2 px-xxl-4 d-flex align-items-center">
+                                                    <h5 class="card-title m-0 d-inline-block">CATI full package</h5>
+                                                </div>
+                                                <div class="card-body"><svg class="icon icon-cati">
+                                                        <use xlink:href="./img/services_icons.svg#icon-cati"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="card-footer p-0">
+                                                    <div class="btn-group w-100">
+                                                        <a href="#" class="btn">Add +</a>
+                                                        <a href="#" class="btn dots"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="p-0 block-wh card h-100">
+                                                <div class="card-header p-3 px-sm-2 px-xxl-4 d-flex align-items-center">
+                                                    <h5 class="card-title m-0 d-inline-block">VOIP</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <svg class="icon icon-voip">
+                                                        <use xlink:href="./img/services_icons.svg#icon-voip"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="card-footer p-0">
+                                                    <div class="btn-group w-100">
+                                                        <a href="#" class="btn">Add +</a>
+                                                        <a href="#" class="btn dots"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="p-0 block-wh card h-100">
+                                                <div class="card-header p-3 px-sm-2 px-xxl-4 d-flex align-items-center">
+                                                    <h5 class="card-title m-0 d-inline-block">CAWI survey</h5>
+                                                    <span class="d-inline-block ms-auto current">120/1000</span>
+                                                </div>
+                                                <div class="card-body">
+                                                    <svg class="icon icon-cawi">
+                                                        <use xlink:href="./img/services_icons.svg#icon-cawi"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="card-footer p-0">
+                                                    <div class="btn-group w-100">
+                                                        <a href="#" class="btn">Add +</a>
+                                                        <a href="#" class="btn dots"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="p-0 block-wh card h-100">
+                                                <div class="card-header p-3 px-sm-2 px-xxl-4 d-flex align-items-center">
+                                                    <h5 class="card-title m-0 d-inline-block">Retail Audit</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <svg class="icon icon-audit">
+                                                        <use xlink:href="./img/services_icons.svg#icon-audit"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="card-footer p-0">
+                                                    <div class="btn-group w-100">
+                                                        <a href="#" class="btn">Add +</a>
+                                                        <a href="#" class="btn dots"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-monthly" role="tabpanel"
+                                aria-labelledby="pills-monthly-tab">
+                                <div class="container p-0">
+                                    <div class="row row-cols-2 row-cols-lg-4 g-2 g-lg-4">
+                                        <div class="col">
+                                            <div class="p-0 block-wh card h-100 active">
+                                                <div class="card-header p-3 px-sm-2 px-xxl-4 d-flex align-items-center">
+                                                    <h5 class="card-title m-0 d-inline-block">Regular storage</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <svg class="icon icon-storage">
+                                                        <use xlink:href="./img/services_icons.svg#icon-storage"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="card-footer p-0">
+                                                    <div class="btn-group w-100">
+                                                        <a href="#" class="btn">Add +</a>
+                                                        <a href="#" class="btn dots"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="p-0 block-wh card h-100 active">
+                                                <div class="card-header p-3 px-sm-2 px-xxl-4 d-flex align-items-center">
+                                                    <h5 class="card-title m-0 d-inline-block">Archive storage</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <svg class="icon icon-archive">
+                                                        <use xlink:href="./img/services_icons.svg#icon-archive"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="card-footer p-0">
+                                                    <div class="btn-group w-100">
+                                                        <a href="#" class="btn">Add +</a>
+                                                        <a href="#" class="btn dots"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="p-0 block-wh card h-100 active">
+                                                <div class="card-header p-3 px-sm-2 px-xxl-4 d-flex align-items-center">
+                                                    <h5 class="card-title m-0 d-inline-block">email sending service</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <svg class="icon icon-emailsend">
+                                                        <use xlink:href="./img/services_icons.svg#icon-emailsend"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="card-footer p-0">
+                                                    <div class="btn-group w-100">
+                                                        <a href="#" class="btn">Add +</a>
+                                                        <a href="#" class="btn dots"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="p-0 block-wh card h-100 active">
+                                                <div class="card-header p-3 px-sm-2 px-xxl-4 d-flex align-items-center">
+                                                    <h5 class="card-title m-0 d-inline-block">outgoing email logs</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <svg class="icon icon-emaillogs">
+                                                        <use xlink:href="./img/services_icons.svg#icon-emaillogs"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="card-footer p-0">
+                                                    <div class="btn-group w-100">
+                                                        <a href="#" class="btn">Add +</a>
+                                                        <a href="#" class="btn dots"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="p-0 block-wh card h-100 active">
+                                                <div class="card-header p-3 px-sm-2 px-xxl-4 d-flex align-items-center">
+                                                    <h5 class="card-title m-0 d-inline-block">map based scheduling</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <svg class="icon icon-mapshed">
+                                                        <use xlink:href="./img/services_icons.svg#icon-mapshed"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="card-footer p-0">
+                                                    <div class="btn-group w-100">
+                                                        <a href="#" class="btn">Add +</a>
+                                                        <a href="#" class="btn dots"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="p-0 block-wh card h-100">
+                                                <div class="card-header p-3 px-sm-2 px-xxl-4 d-flex align-items-center">
+                                                    <h5 class="card-title m-0 d-inline-block">custom domain</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <svg class="icon icon-customdom">
+                                                        <use xlink:href="./img/services_icons.svg#icon-customdom"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="card-footer p-0">
+                                                    <div class="btn-group w-100">
+                                                        <a href="#" class="btn">Add +</a>
+                                                        <a href="#" class="btn dots"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="p-0 block-wh card h-100">
+                                                <div class="card-header p-3 px-sm-2 px-xxl-4 d-flex align-items-center">
+                                                    <h5 class="card-title m-0 d-inline-block">SSL</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <svg class="icon icon-ssl">
+                                                        <use xlink:href="./img/services_icons.svg#icon-ssl"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="card-footer p-0">
+                                                    <div class="btn-group w-100">
+                                                        <a href="#" class="btn">Add +</a>
+                                                        <a href="#" class="btn dots"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="p-0 block-wh card h-100">
+                                                <div class="card-header p-3 px-sm-2 px-xxl-4 d-flex align-items-center">
+                                                    <h5 class="card-title m-0 d-inline-block">Adcance Mystery Shopping
+                                                    </h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <svg class="icon icon-advancemyst">
+                                                        <use xlink:href="./img/services_icons.svg#icon-advancemyst">
+                                                        </use>
+                                                    </svg>
+                                                </div>
+                                                <div class="card-footer p-0">
+                                                    <div class="btn-group w-100">
+                                                        <a href="#" class="btn">Add +</a>
+                                                        <a href="#" class="btn dots"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="p-0 block-wh card h-100 active">
+                                                <div class="card-header p-3 px-sm-2 px-xxl-4 d-flex align-items-center">
+                                                    <h5 class="card-title m-0 d-inline-block">Call Center Managment</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <svg class="icon icon-callcenter">
+                                                        <use xlink:href="./img/services_icons.svg#icon-callcenter">
+                                                        </use>
+                                                    </svg>
+                                                </div>
+                                                <div class="card-footer p-0">
+                                                    <div class="btn-group w-100">
+                                                        <a href="#" class="btn">Add +</a>
+                                                        <a href="#" class="btn dots"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="tab-pane fade" id="pills-specials" role="tabpanel"
+                                aria-labelledby="pills-specials-tab">
+                                <div class="container p-0">
+                                    <div class="row row-cols-2 row-cols-lg-4 g-2 g-lg-4">
+                                        <div class="col">
+                                            <div class="p-0 block-wh card h-100 active">
+                                                <div class="card-header p-3 px-sm-2 px-xxl-4 d-flex align-items-center">
+                                                    <h5 class="card-title m-0 d-inline-block">CSS implementation</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <svg class="icon icon-css">
+                                                        <use xlink:href="./img/services_icons.svg#icon-css"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="card-footer p-0">
+                                                    <div class="btn-group w-100">
+                                                        <a href="#" class="btn dots"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="p-0 block-wh card h-100 active">
+                                                <div class="card-header p-3 px-sm-2 px-xxl-4 d-flex align-items-center">
+                                                    <h5 class="card-title m-0 d-inline-block">Development</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <svg class="icon icon-developm">
+                                                        <use xlink:href="./img/services_icons.svg#icon-developm"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="card-footer p-0">
+                                                    <div class="btn-group w-100">
+                                                        <a href="#" class="btn dots"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="p-0 block-wh card h-100 active">
+                                                <div class="card-header p-3 px-sm-2 px-xxl-4 d-flex align-items-center">
+                                                    <h5 class="card-title m-0 d-inline-block">Checker Plus outsourcing
+                                                    </h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <svg class="icon icon-checkerout">
+                                                        <use xlink:href="./img/services_icons.svg#icon-checkerout">
+                                                        </use>
+                                                    </svg>
+                                                </div>
+                                                <div class="card-footer p-0">
+                                                    <div class="btn-group w-100">
+                                                        <a href="#" class="btn dots"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="p-0 block-wh card h-100 active">
+                                                <div class="card-header p-3 px-sm-2 px-xxl-4 d-flex align-items-center">
+                                                    <h5 class="card-title m-0 d-inline-block">domain redirection</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <svg class="icon icon-domain">
+                                                        <use xlink:href="./img/services_icons.svg#icon-domain"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="card-footer p-0">
+                                                    <div class="btn-group w-100">
+                                                        <a href="#" class="btn dots"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="p-0 block-wh card h-100 active">
+                                                <div class="card-header p-3 px-sm-2 px-xxl-4 d-flex align-items-center">
+                                                    <h5 class="card-title m-0 d-inline-block">Online Training</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <svg class="icon icon-onlinetrain">
+                                                        <use xlink:href="./img/services_icons.svg#icon-onlinetrain">
+                                                        </use>
+                                                    </svg>
+                                                </div>
+                                                <div class="card-footer p-0">
+                                                    <div class="btn-group w-100">
+                                                        <a href="#" class="btn dots"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="p-0 block-wh card h-100 active">
+                                                <div class="card-header p-3 px-sm-2 px-xxl-4 d-flex align-items-center">
+                                                    <h5 class="card-title m-0 d-inline-block">on-site training</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <svg class="icon icon-onsitetrain">
+                                                        <use xlink:href="./img/services_icons.svg#icon-onsitetrain">
+                                                        </use>
+                                                    </svg>
+                                                </div>
+                                                <div class="card-footer p-0">
+                                                    <div class="btn-group w-100">
+                                                        <a href="#" class="btn dots"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="p-0 block-wh card h-100 active">
+                                                <div class="card-header p-3 px-sm-2 px-xxl-4 d-flex align-items-center">
+                                                    <h5 class="card-title m-0 d-inline-block">self-training</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <svg class="icon icon-selftrain">
+                                                        <use xlink:href="./img/services_icons.svg#icon-selftrain"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="card-footer p-0">
+                                                    <div class="btn-group w-100">
+                                                        <a href="#" class="btn dots"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="p-0 block-wh card h-100 active">
+                                                <div class="card-header p-3 px-sm-2 px-xxl-4 d-flex align-items-center">
+                                                    <h5 class="card-title m-0 d-inline-block">Support On-line</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <svg class="icon icon-support">
+                                                        <use xlink:href="./img/services_icons.svg#icon-support"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="card-footer p-0">
+                                                    <div class="btn-group w-100">
+                                                        <a href="#" class="btn dots"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/my.js"></script>
+</body>
+
+</html>
