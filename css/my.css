@@ -969,6 +969,9 @@ table.childs .parent_tr.active {
   line-height: 1.83;
   color: #75b9ff;
 }
+.block-wh.completed .current {
+  color: #aeaeae;
+}
 .block-wh .icon {
   height: 45px;
   margin: auto;
