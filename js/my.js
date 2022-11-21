@@ -437,25 +437,28 @@ jQuery(document).ready(function ($) {
     spinerOff();
 
     drawStuff();
-    if ($('#donut1').length) {
-      drawDonut1();
+    if ($('.input-number-buttons').length) {
+      $('.input-number-buttons').inputSpinner();
     }
-    if ($('#donut2').length) {
-      drawDonut2();
-    }
-    if ($('.pick-date').length) {
-      let DateSet = window.SETTINGS
-        ? window.SETTINGS
-        : { formatSubmit: 'yyyy-mm-dd', editable: true };
-      DateSet['editable'] = true;
-      DateSet['today'] = '';
-      DateSet['selectYears'] = true;
-      DateSet.format = 'dd-mm-yyyy';
-      $('.pick-date').pickadate(DateSet);
-      editDate();
-      pickDate2();
-      pickBranch();
-    }
+    // if ($('#donut1').length) {
+    //   drawDonut1();
+    // }
+    // if ($('#donut2').length) {
+    //   drawDonut2();
+    // }
+    // if ($('.pick-date').length) {
+    //   let DateSet = window.SETTINGS
+    //     ? window.SETTINGS
+    //     : { formatSubmit: 'yyyy-mm-dd', editable: true };
+    //   DateSet['editable'] = true;
+    //   DateSet['today'] = '';
+    //   DateSet['selectYears'] = true;
+    //   DateSet.format = 'dd-mm-yyyy';
+    //   $('.pick-date').pickadate(DateSet);
+    //   editDate();
+    //   pickDate2();
+    //   pickBranch();
+    // }
     // if ($('.fht-cell').length) {
     //   $('.fht-cell').each(function (index) {
     //     let width = $(this).siblings().innerWidth();

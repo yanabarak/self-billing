@@ -396,6 +396,9 @@ aside .fliph button.navbar-toggler.navbar-toggler-button {
 .white-color {
   color: #fff !important;
 }
+.black-color {
+  color: #000;
+}
 .color-lgrey2 {
   color: #797979;
 }
@@ -452,6 +455,13 @@ button.btn.btn-outline-main:hover,
   color: #fff !important;
   box-shadow: 0px 0px 0px 50px var(--main-brand-color) inset;
 }
+
+button.disabled,
+[type='button'].disabled {
+  opacity: 1;
+  background: #c4c4c4;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.043);
+}
 button:not(.navbar-toggler):not(.accordion-button):not([aria-label='Close']):hover,
 [type='button'].btn:not(.navbar-toggler):not(.accordion-button):not([aria-label='Close']):hover {
   box-shadow: 0px 0px 0px 50px var(--main-brand-color) inset;
@@ -494,6 +504,9 @@ div#content1,
 a[type='button'] {
   -webkit-appearance: none;
   text-decoration: none;
+}
+.fs-16 {
+  font-size: 16px !important;
 }
 .fs-18 {
   font-size: 18px !important;
@@ -1030,7 +1043,6 @@ table.childs .parent_tr.active {
 
 .card-icon {
   width: 164px;
-  height: 213px;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 5px;
 }
@@ -1217,6 +1229,45 @@ th .filter-control:focus {
 .bootstrap-table .fixed-table-pagination > .pagination,
 .bootstrap-table .fixed-table-pagination > .pagination-detail {
   margin-top: 16px !important;
+}
+
+#self-bill input.input-number-buttons {
+  width: min-content;
+  flex-grow: 0;
+  min-width: 0px;
+  max-width: 50px;
+  border-radius: 0px;
+}
+.btn.btn-increment.btn-outline-secondary.btn-plus {
+  background: #fafafa;
+  border: 1px solid #d9d9d9;
+  border-radius: 0px 2px 2px 0px !important;
+}
+.btn.btn-decrement.btn-outline-secondary.btn-minus {
+  background: #fafafa;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px 0px 0px 2px;
+}
+.right-0 {
+  right: 0px;
+}
+
+.card-el ~ hr:last-child {
+  margin-bottom: 0px !important;
+}
+.form-control {
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+}
+.total {
+  color: #343434;
+}
+#cart-prepaid button:not(:last-child) {
+  margin-bottom: 8px;
+}
+#cart-prepaid button:first-of-type {
+  margin-top: 38px;
 }
 @media (max-width: 1024.5px) {
   .mx-80 {
