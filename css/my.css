@@ -448,6 +448,9 @@ button.btn-outline-sec:focus,
   color: var(--second-brand-color);
   box-shadow: 0px 0px 0px 2px var(--second-brand-color) inset;
 }
+button.btn-outline-sec.btn-outline-sec-light {
+  box-shadow: 0px 0px 0px 1px var(--second-brand-color) inset;
+}
 button.btn.btn-outline-sec:hover,
 button.btn.btn-outline-main:hover,
 [type='button'].btn.btn-outline-sec:hover,
@@ -898,6 +901,10 @@ table.childs .parent_tr.active {
   margin-left: 80px;
   margin-right: 80px;
 }
+.mx-30 {
+  margin-left: 30px;
+  margin-right: 30px;
+}
 .header-wrapper .nav.right-nav a {
   line-height: 1.22;
   text-decoration-line: underline;
@@ -1269,6 +1276,73 @@ th .filter-control:focus {
 #cart-prepaid button:first-of-type {
   margin-top: 38px;
 }
+.divider span:not(:first-child)::before {
+  content: ' | ';
+}
+
+.progress-tracking {
+  height: 4px;
+  background: #aeaeae;
+  overflow: visible !important;
+  margin-bottom: 65px;
+  max-width: calc(100% - 50px);
+}
+.progress-tracking .progress-bar {
+  position: relative;
+  overflow: visible !important;
+  background-color: #dfdfdf;
+}
+.progress-tracking .progress-bar:before {
+  content: '';
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  z-index: 1;
+  background: #ffffff;
+  border: 2px solid #dfdfdf;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+.progress-tracking .status-tracking {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #545454;
+  position: absolute;
+  left: 0px;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.progress-tracking.delivered .progress-bar,
+.progress-tracking.received .progress-bar:first-child,
+.progress-tracking.received .progress-bar:nth-child(2),
+.progress-tracking.accepted .progress-bar:first-child {
+  background-color: var(--main-brand-color);
+}
+.progress-tracking.delivered .progress-bar:before,
+.progress-tracking.received .progress-bar:not(:last-child):before,
+.progress-tracking.accepted .progress-bar:first-child:before,
+.progress-tracking.accepted .progress-bar:nth-child(2):before,
+.progress-tracking.placed .progress-bar:first-child:before {
+  border-color: var(--main-brand-color);
+  background-color: var(--main-brand-color);
+}
+.progress-tracking.placed .progress-bar:nth-child(1),
+.progress-tracking.accepted .progress-bar:nth-child(2) {
+  background-color: rgba(174, 174, 174, 0.87);
+}
+.progress-tracking.placed .progress-bar:nth-child(2)::before,
+.progress-tracking.accepted .progress-bar:nth-child(3):before {
+  border-color: rgba(174, 174, 174, 0.87);
+}
+button > svg {
+  width: 14px;
+  height: 14px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
 @media (max-width: 1024.5px) {
   .mx-80 {
     margin-left: 24px;
@@ -1436,5 +1510,31 @@ th .filter-control:focus {
   }
   .mt-75 {
     margin-top: 25px;
+  }
+
+  .progress-tracking {
+    max-width: 100%;
+  }
+  .progress-tracking .progress-bar:nth-child(2) .status-tracking {
+    max-width: 50%;
+    margin-left: -20%;
+  }
+
+  .progress-tracking .progress-bar:nth-child(3) .status-tracking {
+    margin-left: -38%;
+  }
+  .progress-tracking .progress-bar:last-child .status-tracking {
+    right: -10px;
+    left: auto;
+  }
+  .progress-tracking .status-tracking {
+    max-width: 100px;
+    font-size: 11px;
+  }
+  .fs-18 {
+    font-size: 16px !important;
+  }
+  .fs-16 {
+    font-size: 14px !important;
   }
 }
