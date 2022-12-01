@@ -777,6 +777,60 @@ button.navbar-toggler + a i.far.fa-bell.badge-notificatios:hover {
 .container-fluid {
   padding: 0px;
 }
+
+select.form-select,
+.dropdown.bootstrap-select.form-select button.btn.dropdown-toggle {
+  color: #aeaeae;
+  font-size: 16px;
+  border-color: #dadada;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='9' viewBox='0 0 16 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.949707 0.872359L7.98695 7.12769L15.0242 0.872359' stroke='%23007BFF' stroke-width='2'/%3e%3c/svg%3e ");
+  background-size: 14px 6px;
+}
+.dropdown.bootstrap-select.form-select {
+  border: 0px;
+  padding: 0px;
+  background-image: none !important;
+  margin-bottom: 0px !important;
+}
+.dropdown.bootstrap-select.form-select button.btn.dropdown-toggle {
+  background-repeat: no-repeat;
+  display: block;
+  color: #aeaeae;
+  font-size: 16px;
+  font-weight: normal;
+  width: 100%;
+  padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  border-radius: 0.25rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.btn.dropdown-toggle.btn-light:not(.bs-placeholder) > .filter-option {
+  color: var(--second-brand-color);
+}
+.dropdown.bootstrap-select.show-tick.form-select {
+  border: 0px;
+  padding: 0px;
+  background-image: none !important;
+}
+.dropdown.bootstrap-select.form-select button.btn.dropdown-toggle {
+  background-color: transparent;
+  height: auto;
+  outline: none !important;
+}
+.dropdown.bootstrap-select.form-select button.btn.dropdown-toggle:after {
+  content: none;
+}
+.dropdown.bootstrap-select.form-select button.btn.dropdown-toggle:hover,
+.dropdown.bootstrap-select.form-select button.btn.dropdown-toggle:active {
+  color: inherit !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
 /*Telephonic Survey page*/
 /*Telephonic Survey page*/
 /*create new job*/
@@ -999,21 +1053,8 @@ table.childs .parent_tr.active {
   width: 100%;
   fill: #aeaeae;
 }
-.icon.icon-internet,
-.icon.icon-emailsend {
-  max-height: 40px;
-}
-
-.block-wh .icon-telephonic,
-.block-wh .icon-cati {
-  stroke: #aeaeae;
-}
 .block-wh.active .icon {
   fill: var(--second-brand-color);
-}
-.block-wh.active .icon-telephonic,
-.block-wh.active .icon-cati {
-  stroke: var(--second-brand-color);
 }
 .block-wh .btn-group .btn {
   flex-grow: 1 !important;
@@ -1021,10 +1062,36 @@ table.childs .parent_tr.active {
   min-width: 0 !important;
   min-height: 40px;
 }
+
+.block-wh .card-footer .btn-group .btn > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 .block-wh .dots {
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='21' height='4' viewBox='0 0 21 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M4.43663 3.55469C4.43663 3.8006 4.21546 4 3.94271 4H0.493923C0.221171 4 0 3.8006 0 3.55469V0.445313C0 0.199404 0.221171 0 0.493923 0H3.94271C4.07372 0 4.19936 0.046875 4.292 0.130395C4.38464 0.213914 4.43663 0.327194 4.43663 0.445313V3.55469ZM12.7183 3.55469C12.7183 3.8006 12.4971 4 12.2244 4H8.77561C8.50286 4 8.28169 3.8006 8.28169 3.55469V0.445313C8.28169 0.199404 8.50286 0 8.77561 0H12.2244C12.3554 0 12.481 0.046875 12.5737 0.130395C12.6663 0.213914 12.7183 0.327194 12.7183 0.445313V3.55469ZM21 3.55469C21 3.8006 20.7788 4 20.5061 4H17.0573C16.7845 4 16.5634 3.8006 16.5634 3.55469V0.445313C16.5634 0.199404 16.7845 0 17.0573 0H20.5061C20.6371 0 20.7627 0.046875 20.8554 0.130395C20.948 0.213914 21 0.327194 21 0.445313V3.55469Z' fill='%23007BFF'/%3e%3c/svg%3e ");
   background-repeat: no-repeat;
   background-position: center;
+}
+.block-wh .minus {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='17' viewBox='0 0 16 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7.99999 0.500141C5.87825 0.500141 3.84341 1.34299 2.34325 2.84333C0.842911 4.34353 6.10352e-05 6.3784 6.10352e-05 8.50007C6.10352e-05 10.6217 0.842911 12.6566 2.34325 14.1568C3.84345 15.6571 5.87832 16.5 7.99999 16.5C10.1217 16.5 12.1566 15.6571 13.6567 14.1568C15.1571 12.6566 15.9999 10.6217 15.9999 8.50007C15.9947 6.37998 15.1502 4.34808 13.6509 2.84897C12.1518 1.34973 10.1201 0.505256 7.99985 0.5L7.99999 0.500141ZM7.99999 14.9198C6.29736 14.9198 4.6645 14.2434 3.46035 13.0395C2.25651 11.8356 1.58012 10.2027 1.58012 8.49989C1.58012 6.79712 2.25651 5.1644 3.46035 3.96025C4.66432 2.75642 6.29722 2.08002 7.99999 2.08002C9.70276 2.08002 11.3355 2.75642 12.5396 3.96025C13.7435 5.16423 14.4199 6.79712 14.4199 8.49989C14.4146 10.2009 13.7366 11.8307 12.5338 13.0335C11.331 14.2363 9.7011 14.9143 8.0002 14.9196L7.99999 14.9198Z' fill='%23007BFF'/%3e%3cpath d='M10.4494 7.70996H5.55064C5.26845 7.70996 5.00761 7.86056 4.86641 8.10498C4.72532 8.34942 4.72532 8.65062 4.86641 8.89503C5.00764 9.13946 5.26845 9.29005 5.55064 9.29005H10.4494C10.7315 9.29005 10.9924 9.13945 11.1336 8.89503C11.2747 8.6506 11.2747 8.34939 11.1336 8.10498C10.9924 7.86055 10.7315 7.70996 10.4494 7.70996Z' fill='%23007BFF'/%3e%3c/svg%3e ");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.block-wh .card-footer .btn-group .btn:not(:last-child):after {
+  content: '';
+  height: 16px;
+  width: 1px;
+  background-color: #f0f0f0;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+}
+.block-wh .card-footer .btn-group .btn {
+  position: relative;
 }
 .block-wh .btn {
   font-size: 14px;
@@ -1343,6 +1410,108 @@ button > svg {
   margin-right: 6px;
   vertical-align: middle;
 }
+.mh-115 {
+  min-height: 115px;
+  width: 93px;
+}
+.input-number-buttons-wrap .input-group {
+  width: fit-content;
+}
+
+#self-bill input.input-number-buttons,
+#self-bill .btn.btn-outline-secondary {
+  padding: 0px 6px;
+  max-height: 24px;
+}
+.notifications-popover {
+  min-width: 440px;
+  margin-left: -75px !important;
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.1));
+  border-radius: 4px;
+}
+.notifications-popover .popover-arrow {
+  display: none !important;
+}
+.notifications-popover .popover-header {
+  background-color: transparent;
+  border: 0px solid;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #1a1f36;
+  padding: 12px 16px;
+}
+
+.notifications-popover .dropdown.bootstrap-select.form-select {
+  float: right !important;
+  width: fit-content;
+}
+[data-id='notifications-select'] {
+  max-width: 100px;
+  border: 0px solid;
+}
+.notifications-popover .dropdown.bootstrap-select.form-select button.btn.dropdown-toggle {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='6' height='4' viewBox='0 0 6 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.75 0.875L3 3.125L5.25 0.875' stroke='%23AEAEAE' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ") !important;
+  background-size: 8px !important;
+}
+.notifications-popover .bootstrap-select .dropdown-toggle .filter-option-inner-inner {
+  font-size: 12px;
+  color: #aeaeae;
+  font-weight: 500;
+}
+.notifications-popover .btn.dropdown-toggle.btn-light {
+  padding-top: 1px !important;
+  padding-bottom: 1px !important;
+}
+.notif-info {
+  line-height: 1.43;
+  color: #231f20;
+}
+.notif-date {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #aeaeae;
+}
+.notifications-popover .popover-body {
+  padding: 0px !important;
+}
+.notifications-popover .popover-body .popover-body {
+  padding: 0px !important;
+  max-height: calc(100vh - 200px);
+  overflow: auto;
+}
+
+.notif-elem > .col-auto {
+  padding-left: 21px !important;
+  padding-right: 21px !important;
+}
+.notifications-popover .notif-elem:not(:last-child) {
+  box-shadow: 0px 1px 0px #e4e8ee;
+}
+.notifications-popover .icon-notif-new {
+  width: 32px;
+  height: 32px;
+  fill: var(--second-brand-color);
+}
+.notifications-popover .icon-notif-readed {
+  width: 32px;
+  height: 32px;
+  fill: #aeaeae;
+}
+.nav-link.active.badge > .badge {
+  position: absolute;
+  background-color: var(--second-brand-color);
+  font-size: 10px;
+  line-height: 10px;
+  border-radius: 50%;
+  min-width: 16px !important;
+  display: block;
+  padding: 3px !important;
+  box-sizing: border-box;
+  margin-left: 10px;
+  margin-top: -8px;
+}
 @media (max-width: 1024.5px) {
   .mx-80 {
     margin-left: 24px;
@@ -1536,5 +1705,10 @@ button > svg {
   }
   .fs-16 {
     font-size: 14px !important;
+  }
+
+  .notifications-popover {
+    margin: 0px !important;
+    min-width: unset;
   }
 }
