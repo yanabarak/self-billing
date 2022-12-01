@@ -120,6 +120,36 @@ jQuery(document).ready(function ($) {
     return new bootstrap.Popover(popoverTriggerEl);
   });
 
+  function notificationPopover() {
+    var popoverTriggerList = [].slice.call(
+      document.querySelectorAll("a.notif-link[data-bs-toggle='popover']")
+    );
+    let notif = $('#notif').html();
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+      return new bootstrap.Popover(popoverTriggerEl, {
+        html: true,
+        sanitize: false,
+        content: notif,
+        container: 'body',
+        trigger: 'manual',
+        placement: 'bottom',
+        customClass: 'notifications-popover',
+      });
+    });
+
+    $('body').on('click', function (e) {
+      $('[data-bs-toggle="popover"]').each(function () {
+        if (
+          !$(this).is(e.target) &&
+          $(this).has(e.target).length === 0 &&
+          $('.popover').has(e.target).length === 0
+        ) {
+          $(this).popover('hide');
+        }
+      });
+    });
+  }
+
   if ($('.datepicker_inline').length) {
     let DateSet = window.SETTINGS
       ? window.SETTINGS
@@ -491,6 +521,9 @@ jQuery(document).ready(function ($) {
     // }
     if ($('tbody.blue-grey-scroll>tr').length) {
       // $("tbody.blue-grey-scroll>tr").closest('table').find("thead>tr").attr("style",`width:${$("tbody.blue-grey-scroll>tr").innerWidth()}px`)
+    }
+    if ($('a.notif-link').length) {
+      notificationPopover();
     }
   });
 });

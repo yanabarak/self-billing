@@ -1441,25 +1441,24 @@ button > svg {
   color: #1a1f36;
   padding: 12px 16px;
 }
-
-.notifications-popover .dropdown.bootstrap-select.form-select {
+.notifications-popover select {
   float: right !important;
   width: fit-content;
 }
-[data-id='notifications-select'] {
+#notifications-select {
   max-width: 100px;
   border: 0px solid;
 }
-.notifications-popover .dropdown.bootstrap-select.form-select button.btn.dropdown-toggle {
+.notifications-popover #notifications-select {
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='6' height='4' viewBox='0 0 6 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.75 0.875L3 3.125L5.25 0.875' stroke='%23AEAEAE' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ") !important;
   background-size: 8px !important;
 }
-.notifications-popover .bootstrap-select .dropdown-toggle .filter-option-inner-inner {
+.notifications-popover #notifications-select {
   font-size: 12px;
   color: #aeaeae;
   font-weight: 500;
 }
-.notifications-popover .btn.dropdown-toggle.btn-light {
+.notifications-popover #notifications-select {
   padding-top: 1px !important;
   padding-bottom: 1px !important;
 }
