@@ -421,6 +421,7 @@ aside .fliph button.navbar-toggler.navbar-toggler-button {
   text-decoration: none;
 }
 
+a.btn,
 button.btn,
 button.btn-md,
 [type='button'].btn,
@@ -466,7 +467,8 @@ button.disabled,
   box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.043);
 }
 button:not(.navbar-toggler):not(.accordion-button):not([aria-label='Close']):hover,
-[type='button'].btn:not(.navbar-toggler):not(.accordion-button):not([aria-label='Close']):hover {
+[type='button'].btn:not(.navbar-toggler):not(.accordion-button):not([aria-label='Close']):hover,
+.btn.sec-bg:hover {
   box-shadow: 0px 0px 0px 50px var(--main-brand-color) inset;
   background-color: var(--main-brand-color);
   color: #fff;
@@ -1511,6 +1513,18 @@ button > svg {
   margin-left: 10px;
   margin-top: -8px;
 }
+
+.header-wrapper .nav.right-nav a .badge {
+  min-height: 19px;
+  line-height: 19px;
+  box-sizing: border-box;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  font-size: 10px;
+  min-width: 19px !important;
+  margin-left: 5px;
+  margin-top: 6px;
+}
 @media (max-width: 1024.5px) {
   .mx-80 {
     margin-left: 24px;
@@ -1597,6 +1611,10 @@ button > svg {
   }
 }
 @media (max-width: 767.5px) {
+  .card-el .btn-close {
+    right: -20px !important;
+    top: -10px !important;
+  }
   #carouselMenu .carousel-item.active {
     display: block !important;
   }

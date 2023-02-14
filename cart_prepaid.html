@@ -160,7 +160,13 @@
                         </nav>
                         <ul class="nav w-auto ms-auto right-nav fs-18 d-none d-md-flex">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">My cart</a>
+                                <a class="nav-link position-relative" href="#">My cart
+                                    <span
+                                        class="position-absolute top-0 start-75 translate-middle badge rounded-circle sec-bg">
+                                        8
+                                        <span class="visually-hidden">elements in card</span>
+                                    </span>
+                                </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Tracking</a>
@@ -194,35 +200,38 @@
                         </ul>
                     </div>
                     <div class="content-wrapper m-0 p-0 mt-md-5 row">
-                        <div class="col bg-white p-4 mt-2 mt-md-0 py-3">
-                            <div class="card-el m-0 p-0 row position-relative">
-                                <button type="button"
-                                    class="btn-close opacity-1 align-top align-self-start ms-auto col-auto position-absolute right-0"
-                                    data-bs-dismiss="modal" aria-label="Close"></button>
-                                <div class="col-2 card-icon d-none d-md-flex justify-content-center align-items-center">
-                                    <svg class="icon icon-mystery">
-                                        <use xlink:href="./img/services_icons.svg#icon-mystery"></use>
-                                    </svg>
+                        <div class="align-self-start col m-0 p-0">
+
+                            <div class="col bg-white p-4 mt-2 mt-md-0 py-3">
+                                <div class="card-el m-0 p-0 row position-relative">
+                                    <button type="button"
+                                        class="btn-close opacity-1 align-top align-self-start ms-auto col-auto position-absolute right-0"
+                                        data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <div
+                                        class="col-2 card-icon d-none d-md-flex justify-content-center align-items-center">
+                                        <svg class="icon icon-mystery">
+                                            <use xlink:href="./img/services_icons.svg#icon-mystery"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="card-info col ms-md-5 p-0">
+                                        <form action="" id="self-bill">
+                                            <div class="fs-18 sec-color card-title mb-2">Mystery Shopping reviews
+                                                Package
+                                                1000
+                                            </div>
+                                            <p class="fs-16 color-lgrey2 mb-3">Qty: <span>1</span> reviews</p>
+                                            <p class="fs-16 color-black  mb-3" mb-2>Price: <span class="black-color">300
+                                                    USD</span></p>
+                                            <div class="form-group">
+                                                <input type="number" value="100" min="100" max="10000" step="100"
+                                                    class="form-control-plaintext input-number-buttons"
+                                                    id="amount_mystery" value="" placeholder="100">
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
-                                <div class="card-info col ms-md-5 p-0">
-                                    <form action="" id="self-bill">
-                                        <div class="fs-18 sec-color card-title mb-2">Mystery Shopping reviews
-                                            Package
-                                            1000
-                                        </div>
-                                        <p class="fs-16 color-lgrey2 mb-3">Qty: <span>1</span> reviews</p>
-                                        <p class="fs-16 color-black  mb-3" mb-2>Price: <span class="black-color">300
-                                                USD</span></p>
-                                        <div class="form-group">
-                                            <input type="number" value="1" min="0" max="1000" step="1"
-                                                class="form-control-plaintext input-number-buttons" id="amount_mystery"
-                                                value="" placeholder="999">
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <hr class="my-4">
-                            <div class="card-el m-0 p-0 row position-relative">
+                                <hr class="my-4">
+                                <!-- <div class="card-el m-0 p-0 row position-relative">
                                 <button type="button"
                                     class="btn-close opacity-1 align-top align-self-start ms-auto col-auto position-absolute right-0"
                                     data-bs-dismiss="modal" aria-label="Close"></button>
@@ -247,13 +256,15 @@
                                 </div>
                             </div>
 
-                            <hr class="my-4">
+                            <hr class="my-4"> -->
+                            </div>
+                            <a href="#"
+                                class="btn col-12 col-md-5 py-2 rounded-1 btn-md my-4 fw-bold sec-bg white-color">Add
+                                more
+                                Items</a>
                         </div>
 
-                        <button type="button"
-                            class="d-block d-md-none btn col-12 col-md-3 py-2 rounded-1 btn-md my-4 sec-bg white-color">Add
-                            more
-                            Items</button>
+
                         <div class="col-12 col-md-4 bg-white ms-md-3  px-4 py-3">
                             <form action="" id="cart-prepaid">
                                 <input type="text" class="form-control mb-4" id="discount" value=""
@@ -304,10 +315,6 @@
 
                     </div>
 
-                    <button type="button"
-                        class="btn col-12 col-md-3 py-2 rounded-1 btn-md mt-4 d-none d-md-block sec-bg white-color">Add
-                        more
-                        Items</button>
                 </div>
             </div>
         </div>
