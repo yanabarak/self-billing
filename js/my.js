@@ -525,5 +525,34 @@ jQuery(document).ready(function ($) {
     if ($('a.notif-link').length) {
       notificationPopover();
     }
+
+    if ($('input[type="radio"][name="payment"]').length) {
+      if ($('input[type="radio"][name="payment"]:checked').length) {
+        $($('input[type="radio"][name="payment"]').closest('.secure-elem')).removeClass('active');
+        $($('input[type="radio"][name="payment"]:checked').closest('.secure-elem')).addClass(
+          'active'
+        );
+        if ($('input[type="radio"][name="payment"]:checked').val() == 'bank') {
+          $('#collapsePayment').collapse('show');
+        } else $('#collapsePayment').collapse('hide');
+        $('#proceed').attr('disabled', false);
+      } else {
+        $('#proceed').attr('disabled', true);
+      }
+      $('input[type="radio"][name="payment"]').on('change', function (e) {
+        if ($(e.target).val() == 'bank') {
+          $('#collapsePayment').collapse('show');
+        } else $('#collapsePayment').collapse('hide');
+
+        $($('input[type="radio"][name="payment"]').closest('.secure-elem')).removeClass('active');
+        $($('input[type="radio"][name="payment"]:checked').closest('.secure-elem')).addClass(
+          'active'
+        );
+
+        $('#proceed').attr('disabled', false);
+      });
+    }
+
+    // $('#collapsePayment').collapse('show');
   });
 });
