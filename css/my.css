@@ -1662,6 +1662,51 @@ input[type='radio']:checked {
   margin-top: 37px;
   margin-bottom: 70px;
 }
+
+#record-nav {
+  margin-top: 32px !important;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#record-nav input[type='number'] {
+  width: 63px;
+  height: 28px;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-left: 3px;
+  margin-right: 3px;
+  border-radius: 0.25rem;
+}
+.nav-group > .set + .numb {
+  border-left: 1px solid #1c1c1c;
+}
+.nav-group .arrow .btn-group .btn {
+  padding: 2px 8px !important;
+}
+#record-nav button.btn:disabled {
+  background-color: #fff;
+  color: var(--color-second-darkest);
+}
+#record-nav button.btn {
+  height: 28.5px;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  line-height: 28.5px;
+}
+.rounded-6 {
+  border-radius: 6px !important;
+}
+.btn-check:focus + .btn,
+.btn:focus,
+.navbar-toggler:focus {
+  box-shadow: none;
+}
 @media (max-width: 1024.5px) {
   .mx-80 {
     margin-left: 24px;
