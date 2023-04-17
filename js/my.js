@@ -380,30 +380,56 @@ jQuery(document).ready(function ($) {
 
   // editDate in pickdate input
 
-  function editDate() {
+  function pickDate2() {
+    var target;
+    $('.pick-date-modal').on('click', function (e) {
+      target = $(this);
+      let newDate = $(this).html();
+      $('.showdatefrom').html(newDate);
+      let order_id = target.closest('form').find('input[name="order_id"]').val();
+      $('input[name="change_date_order_id"]').val(order_id);
+      $.ajax({
+        url: '?Controller=Jobs&Action=ajaxGetAvailableDays',
+        method: 'POST',
+        data: { order_id: order_id },
+        success: function (response) {
+          let data = JSON.parse(response);
+          if (typeof data.errors !== 'undefined' && data.errors.length == 0) {
+            let DateSet = window.SETTINGS ? window.SETTINGS : {};
+            data.dates.unshift(true);
+            DateSet.disable = data.dates;
+            $('.pick-date-disabled').pickadate(DateSet);
+            $('#pick-date-modal').modal('show');
+          }
+        },
+      });
+    });
+  }
+  function editDate(dateFormat) {
+    let divider = dateFormat.includes('-') ? '-' : '.';
     var triggerTabList = [].slice.call(document.querySelectorAll('.pick-date'));
 
     triggerTabList.forEach(function (element) {
       var dateMask = IMask(element, {
-        mask: 'd-`m-`Y', // enable date mask
+        mask: dateFormat, // enable date mask
 
         // other options are optional
-        pattern: 'Y-`m-`d', // Pattern mask with defined blocks, default is 'd{.}`m{.}`Y'
+        pattern: dateFormat, // Pattern mask with defined blocks, default is 'd{.}`m{.}`Y'
         // you can provide your own blocks definitions, default blocks for date mask are:
         blocks: {
-          d: {
+          dd: {
             mask: IMask.MaskedRange,
             from: 1,
             to: 31,
             maxLength: 2,
           },
-          m: {
+          mm: {
             mask: IMask.MaskedRange,
             from: 1,
             to: 12,
             maxLength: 2,
           },
-          Y: {
+          yyyy: {
             mask: IMask.MaskedRange,
             from: 1900,
             to: 9999,
@@ -418,22 +444,22 @@ jQuery(document).ready(function ($) {
           if (day < 10) day = '0' + day;
           if (month < 10) month = '0' + month;
 
-          return [year, month, day].join('-');
+          return [year, month, day].join('.');
         },
         // define str -> date convertion
         parse: function (str) {
-          var yearMonthDay = str.split('-');
+          var yearMonthDay = str.split(divider);
           return new Date(yearMonthDay[0], yearMonthDay[1] - 1, yearMonthDay[2]);
         },
 
         // optional interval options
         min: new Date(2000, 0, 1), // defaults to `1900-01-01`
-        max: new Date(2020, 0, 1), // defaults to `9999-01-01`
+        max: new Date(2050, 0, 1), // defaults to `9999-01-01`
 
         autofix: true, // defaults to `false`
 
         // also Pattern options can be set
-        lazy: false,
+        //lazy: false,
 
         // and other common options
         overwrite: true, // defaults to `false`
@@ -443,7 +469,7 @@ jQuery(document).ready(function ($) {
         let date = dateMask.value;
         let elem = $(dateMask.el)[0]['input'];
 
-        $(elem).pickadate('picker').set('select', date, { format: 'dd-mm-yyyy' });
+        $(elem).pickadate('picker').set('select', date, { format: dateFormat });
         dateMask.updateValue(date);
       });
     });
@@ -551,6 +577,20 @@ jQuery(document).ready(function ($) {
 
         $('#proceed').attr('disabled', false);
       });
+    }
+
+    if ($('.pick-date').length) {
+      let DateSet = window.SETTINGS
+        ? window.SETTINGS
+        : { formatSubmit: 'yyyy-mm-dd', editable: true };
+      DateSet['editable'] = true;
+      DateSet['today'] = '';
+      DateSet['selectYears'] = true;
+      DateSet.format = typeof dateFormat == 'undefined' ? 'dd-mm-yyyy' : dateFormat.toLowerCase();
+      $('.pick-date').pickadate(DateSet);
+      editDate(DateSet.format);
+      pickDate2();
+      // pickBranch();
     }
 
     // $('#collapsePayment').collapse('show');

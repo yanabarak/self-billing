@@ -1707,6 +1707,116 @@ input[type='number']::-webkit-inner-spin-button {
 .navbar-toggler:focus {
   box-shadow: none;
 }
+#pick-date-from,
+#pick-date-to {
+  padding: 5px 10px;
+  min-height: 38px;
+  border-radius: 5px;
+  border-color: #dadada;
+}
+
+.form-control.pick-date,
+input[type='text'],
+input[type='password'],
+#pick-branch-modal select,
+.picker__input {
+  font-size: 16px;
+  border-color: #dadada;
+  background-color: #fff;
+  color: #aeaeae;
+  min-height: 48px;
+}
+.form-control.pick-date::placeholder,
+input[type='password']::placeholder,
+input[type='text']::placeholder,
+.picker__input::placeholder {
+  font-size: 16px;
+  color: #aeaeae !important;
+}
+.pick-date,
+#pick-date-to,
+#pick-date-from,
+.picker__input {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='9' viewBox='0 0 16 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.949707 0.872359L7.98695 7.12769L15.0242 0.872359' stroke='%23aeaeae' stroke-width='2'/%3e%3c/svg%3e ");
+  background-size: 14px 6px;
+  background-color: #fff;
+  padding-right: 36px;
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  color: var(--second-brand-color);
+}
+#pick-date-to_root,
+#pick-date-from_root {
+  max-width: 100px !important;
+  width: fit-content !important;
+}
+.picker__select--year {
+  display: inline-block;
+  color: #aeaeae;
+  font-size: 14px;
+  font-weight: normal;
+  width: 60px !important;
+  padding: 0.375rem 10px 0.375rem 0px !important;
+  padding-left: 0.375rem !important;
+  padding-top: 0.375rem !important;
+  padding-bottom: 0.375rem !important;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  border-radius: 0.25rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin-top: -3px !important;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='9' viewBox='0 0 16 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.949707 0.872359L7.98695 7.12769L15.0242 0.872359' stroke='%23aeaeae' stroke-width='2'/%3e%3c/svg%3e ");
+  background-size: 14px 6px;
+  background-position: right 2px center;
+}
+.picker.picker--time {
+  z-index: -1;
+}
+.picker.picker--time.picker--opened {
+  z-index: 2;
+}
+.pick-date.picker__input--active {
+  border-color: var(--second-brand-color);
+  box-shadow: 0 0 4px var(--second-brand-color);
+}
+.fs-90 {
+  font-size: 90px;
+}
+.cardnew span {
+  color: #fff;
+}
+.block .nav-link {
+  top: 10px;
+  right: 10px;
+  padding: 0px;
+}
+.block .nav-link a {
+  fill: #fff;
+}
+
+.dropdown.bootstrap-select.button-grey.dropdown-grey {
+  width: 32px;
+  height: 32px;
+  background: #ccc;
+  border-radius: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0px !important;
+}
+.dropdown.bootstrap-select.button-grey.dropdown-grey::after {
+  content: '';
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='2' height='11' viewBox='0 0 2 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='1' cy='1.5' r='1' fill='%2319202B'/%3e%3ccircle cx='1' cy='5.5' r='1' fill='%2319202B'/%3e%3ccircle cx='1' cy='9.5' r='1' fill='%2319202B'/%3e%3c/svg%3e ");
+  width: 3px;
+  height: 10px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0px !important;
+}
 @media (max-width: 1024.5px) {
   .mx-80 {
     margin-left: 24px;
