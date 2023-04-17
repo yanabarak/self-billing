@@ -1724,7 +1724,10 @@ input[type='password'],
   border-color: #dadada;
   background-color: #fff;
   color: #aeaeae;
-  min-height: 48px;
+  /* min-height: 48px; */
+}
+input[type='text'] {
+  background-image: none;
 }
 .form-control.pick-date::placeholder,
 input[type='password']::placeholder,
