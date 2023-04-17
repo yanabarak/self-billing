@@ -1714,7 +1714,9 @@ input[type='number']::-webkit-inner-spin-button {
   border-radius: 5px;
   border-color: #dadada;
 }
-
+.form-control[type='search'] {
+  padding: 5px;
+}
 .form-control.pick-date,
 input[type='text'],
 input[type='password'],
