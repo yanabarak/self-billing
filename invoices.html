@@ -324,40 +324,27 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <div class="m-0 p-0 d-flex flex-column justify-content-end col-auto mt-0 w-100"
-                                id="record-nav">
+                            <div class="m-0 p-0 d-flex flex-column justify-content-end" id="record-nav">
                                 <div class="nav-group col-auto ms-auto row mb-3 me-0">
-                                    <div class="set col-auto">
-                                        <font color="darkred">Show</font> <input class="form-control" type="number"
-                                            name="show" min="1" value="1">
-                                        <font color="darkred">of</font> 1
-                                    </div>
-                                    <div class="numb col-auto">
-                                        <font color="darkred">Page</font> <input class="form-control" type="number"
-                                            name="page" max="1" value="1">
-                                        <font color="darkred">of</font>
-                                        <span class="total">1</span>
+                                    <div class="set col-auto">Show <input class="form-control" type="number"> of <span
+                                            class="total">40</span></div>
+                                    <div class="numb col-auto">Page <input class="form-control" type="number"> of <span
+                                            class="total">4356</span>
                                     </div>
                                     <div class="arrow col-auto p-0">
                                         <div class="btn-group" role="group" aria-label="Basic example">
-
-                                            <input class="prev-page-input" type="hidden" name="prev-page" value="0">
-                                            <input class="next-page-input" type="hidden" name="next-page" value="0">
-
-                                            <button type="button" disabled="" class="btn btn-primary prev-page">
-                                                <i class="fas fa-chevron-left"></i>
-                                            </button>
-                                            <button type="button" disabled="" class="btn btn-primary next-page"><i
-                                                    class="fas fa-chevron-right "></i>
-                                            </button>
+                                            <button type="button" class="btn btn-primary"><i
+                                                    class="fas fa-chevron-left"></i></button>
+                                            <button type="button" class="btn btn-primary"><i
+                                                    class="fas fa-chevron-right"></i></button>
                                         </div>
                                     </div>
-
-                                    <button type="submit"
-                                        class="btn btn-md sec-bg border-0 white-color rounded-6 p-2 fs-18 px-4 col-auto ms-4">
-                                        <font color="darkred">Show</font>
-                                    </button>
                                 </div>
+                                <div class="btn-group col-auto ms-auto p-0">
+                                    <button type="submit"
+                                        class="btn btn-md sec-bg border-0 white-color rounded-6 p-2 fs-18 px-4 col-auto">Show</button>
+                                </div>
+
                             </div>
                         </form>
                     </div>
