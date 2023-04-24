@@ -94,233 +94,272 @@
                         </ul>
                     </div>
                     <div class="content-wrapper m-0 p-0 mt-md-5">
-                        <form class="row col-12 col-md-7 mt-2 mt-md-0">
-                            <div class="col-12 my-0 row mb-2">
-                                <div class="col-3 d-flex align-items-center">
-                                    <label for="staticСompany" class="black-color fs-16">Сompany</label>
+                        <form method="POST" id="pagination-form">
+                            <div class="row col-12 col-md-7 mt-2 mt-md-0">
+                                <div class="col-12 my-0 row mb-2">
+                                    <div class="col-3 d-flex align-items-center">
+                                        <label for="staticСompany" class="black-color fs-16">Сompany</label>
+                                    </div>
+                                    <div class="col-md-6 col-9"><select class="form-select selectpicker "
+                                            data-live-search="true" aria-label="Сompany" id="staticСompany"
+                                            title="Choose Сompany">
+                                            <option value="0">Choose Сompany</option>
+                                            <option value="1">Choose Сompany</option>
+                                            <option value="2">Choose Сompany</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                <div class="col-md-6 col-9"><select class="form-select selectpicker "
-                                        data-live-search="true" aria-label="Сompany" id="staticСompany"
-                                        title="Choose Сompany">
-                                        <option value="0">Choose Сompany</option>
-                                        <option value="1">Choose Сompany</option>
-                                        <option value="2">Choose Сompany</option>
-                                    </select>
+                                <div class="col-12 my-0 row mb-2">
+                                    <div class="col-3 d-flex align-items-center">
+                                        <label for="staticPaid" class="black-color fs-16">Paid</label>
+                                    </div>
+                                    <div class="col-md-6 col-9"><select class="form-select selectpicker "
+                                            data-live-search="true" aria-label="Paid" id="staticPaid"
+                                            title="Choose Paid">
+                                            <option value="0">Choose Paid</option>
+                                            <option value="1">Choose Paid</option>
+                                            <option value="2">Choose Paid</option>
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-12 my-0 row mb-2">
-                                <div class="col-3 d-flex align-items-center">
-                                    <label for="staticPaid" class="black-color fs-16">Paid</label>
+                                <div class="col-12 my-0 row mb-2">
+                                    <div class="col-3 d-flex align-items-center">
+                                        <label for="staticPayment" class="black-color fs-16">Payment Mode</label>
+                                    </div>
+                                    <div class="col-md-6 col-9">
+                                        <select class="form-select selectpicker " data-live-search="true"
+                                            aria-label="Payment Mode" id="staticPayment" title="Payment Mode">
+                                            <option value="0">Choose Payment</option>
+                                            <option value="1">Choose Payment</option>
+                                            <option value="2">Choose Payment</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                <div class="col-md-6 col-9"><select class="form-select selectpicker "
-                                        data-live-search="true" aria-label="Paid" id="staticPaid" title="Choose Paid">
-                                        <option value="0">Choose Paid</option>
-                                        <option value="1">Choose Paid</option>
-                                        <option value="2">Choose Paid</option>
-                                    </select>
+                                <div class="col-12 my-0 row mb-2">
+                                    <div class="col-12 col-md-3 d-flex align-items-center">
+                                        <p class="black-color fs-16 m-0">Date</p>
+                                    </div>
+                                    <div class="col-6 col-md-3 mb-1 mb-md-0">
+                                        <input type="text" class="form-control pick-date" name="filter[from]"
+                                            placeholder="From" id="pick-date-from">
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <input type="text" class="form-control pick-date" name="filter[to]"
+                                            placeholder="to" id="pick-date-to">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-12 my-0 row mb-2">
-                                <div class="col-3 d-flex align-items-center">
-                                    <label for="staticPayment" class="black-color fs-16">Payment Mode</label>
-                                </div>
-                                <div class="col-md-6 col-9">
-                                    <select class="form-select selectpicker " data-live-search="true"
-                                        aria-label="Payment Mode" id="staticPayment" title="Payment Mode">
-                                        <option value="0">Choose Payment</option>
-                                        <option value="1">Choose Payment</option>
-                                        <option value="2">Choose Payment</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-12 my-0 row mb-2">
-                                <div class="col-12 col-md-3 d-flex align-items-center">
-                                    <p class="black-color fs-16 m-0">Date</p>
-                                </div>
-                                <div class="col-6 col-md-3 mb-1 mb-md-0">
-                                    <input type="text" class="form-control pick-date" name="filter[from]"
-                                        placeholder="From" id="pick-date-from">
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <input type="text" class="form-control pick-date" name="filter[to]" placeholder="to"
-                                        id="pick-date-to">
-                                </div>
-                            </div>
 
-                            <div class="col-12 my-0 row mb-5">
-                                <div class="col-12 col-md-3">
+                                <div class="col-12 my-0 row mb-5">
+                                    <div class="col-12 col-md-3">
+                                        <button type="submit"
+                                            class="btn btn-primary sec-bg border-0 w-100 p-2">Display</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row col-12 col-md-7 mb-5">
+                                <div class="col-12 col-md-9 row pe-md-0">
+                                    <div class="w-50">
+                                        <div class="sec-bg block border rounded-3 row m-0 mb-2 white-color py-2">
+                                            <div
+                                                class="cardnew position-relative col col-md-12 p-0 text-center flex-column">
+                                                <p class="fs-90 fw-light my-0 lh-sm ">
+                                                    5
+                                                </p>
+                                                <span>Not paid invoices</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w-50">
+                                        <div
+                                            class="main-bg block border rounded-3 row m-0 mb-2 white-color py-2 position-relative">
+                                            <div
+                                                class="cardnew position-relative col col-md-12 p-0 text-center flex-column">
+                                                <p class="fs-90 fw-light my-0 lh-sm ">
+                                                    5
+                                                </p>
+                                                <span>Not paid invoices</span>
+                                                <a class="nav-link pe-0 active position-absolute" href="#">
+                                                    <svg class="icon icon-arrows-rotate-solid" width="20" height="20">
+                                                        <use
+                                                            xlink:href="./img/services_icons.svg#icon-arrows-rotate-solid">
+                                                        </use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <table data-toggle="table" class="classic mini-table table table-fixed"
+                                data-filter-control="true" data-pagination="true" data-pagination-parts="['pageList']"
+                                data-pagination-loop="false">
+                                <thead>
+                                    <tr>
+                                        <th data-sortable="true" data-field="num"
+                                            data-filter-control-placeholder="Company" data-field="num">
+                                            Invoice Number</th>
+                                        <th data-sortable="true" data-field="Company" data-filter-control="input"
+                                            data-filter-control-placeholder="Company" data-field="Company">
+                                            Company</th>
+                                        <th data-sortable="true" data-search-on-enter-key="true" data-field="Date"
+                                            data-filter-control="input" data-filter-control-placeholder="Date"
+                                            data-field="Date">
+                                            Invoice Date</th>
+                                        <th data-sortable="true" data-field="amount" data-filter-control="input"
+                                            data-filter-control-placeholder="Total Amount" data-field="amount">
+                                            Amount</th>
+                                        <th data-sortable="true" data-field="Status" data-filter-control="input"
+                                            data-filter-control-placeholder="Status" data-field="Status">
+                                            Payment Status</th>
+                                        <th data-sortable="true" data-field="Mode" data-filter-control="input"
+                                            data-filter-control-placeholder="Mode" data-field="Mode">
+                                            Payment Mode</th>
+                                        <th data-filter-control-placeholder="buttons" data-field="buttons"
+                                            data-width="100px">
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>24</td>
+                                        <td>test</td>
+                                        <td>07.11.2022 09:07:44</td>
+                                        <td>500.0000 USD</td>
+                                        <td>Paid</td>
+                                        <td>test</td>
+                                        <td>
+                                            <button class="dropdown bootstrap-select button-grey dropdown-grey mx-auto"
+                                                type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Download invoice</a></li>
+                                                <li><a class="dropdown-item" href="#">Send reminder</a></li>
+                                                <li><a class="dropdown-item" href="#">Sync with Icount</a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>24</td>
+                                        <td>test</td>
+                                        <td>07.11.2022 09:07:44</td>
+                                        <td>500.0000 USD</td>
+                                        <td>Paid</td>
+                                        <td>test</td>
+                                        <td>
+                                            <button class="dropdown bootstrap-select button-grey dropdown-grey mx-auto"
+                                                type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Download invoice</a></li>
+                                                <li><a class="dropdown-item" href="#">Send reminder</a></li>
+                                                <li><a class="dropdown-item" href="#">Sync with Icount</a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>24</td>
+                                        <td>test</td>
+                                        <td>07.11.2022 09:07:44</td>
+                                        <td>500.0000 USD</td>
+                                        <td>Paid</td>
+                                        <td>test</td>
+                                        <td>
+                                            <button class="dropdown bootstrap-select button-grey dropdown-grey mx-auto"
+                                                type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Download invoice</a></li>
+                                                <li><a class="dropdown-item" href="#">Send reminder</a></li>
+                                                <li><a class="dropdown-item" href="#">Sync with Icount</a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>24</td>
+                                        <td>test</td>
+                                        <td>07.11.2022 09:07:44</td>
+                                        <td>500.0000 USD</td>
+                                        <td>Paid</td>
+                                        <td>test</td>
+                                        <td>
+                                            <button class="dropdown bootstrap-select button-grey dropdown-grey mx-auto"
+                                                type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Download invoice</a></li>
+                                                <li><a class="dropdown-item" href="#">Send reminder</a></li>
+                                                <li><a class="dropdown-item" href="#">Sync with Icount</a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>24</td>
+                                        <td>test</td>
+                                        <td>07.11.2022 09:07:44</td>
+                                        <td>500.0000 USD</td>
+                                        <td>Paid</td>
+                                        <td>test</td>
+                                        <td>
+                                            <button class="dropdown bootstrap-select button-grey dropdown-grey mx-auto"
+                                                type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Download invoice</a></li>
+                                                <li><a class="dropdown-item" href="#">Send reminder</a></li>
+                                                <li><a class="dropdown-item" href="#">Sync with Icount</a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>24</td>
+                                        <td>test</td>
+                                        <td>07.11.2022 09:07:44</td>
+                                        <td>500.0000 USD</td>
+                                        <td>Paid</td>
+                                        <td>test</td>
+                                        <td>
+                                            <button class="dropdown bootstrap-select button-grey dropdown-grey mx-auto"
+                                                type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Download invoice</a></li>
+                                                <li><a class="dropdown-item" href="#">Send reminder</a></li>
+                                                <li><a class="dropdown-item" href="#">Sync with Icount</a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="m-0 p-0 d-flex flex-column justify-content-end col-auto mt-0 w-100"
+                                id="record-nav">
+                                <div class="nav-group col-auto ms-auto row mb-3 me-0">
+                                    <div class="set col-auto">
+                                        <font color="darkred">Show</font> <input class="form-control" type="number"
+                                            name="show" min="1" value="1">
+                                        <font color="darkred">of</font> 1
+                                    </div>
+                                    <div class="numb col-auto">
+                                        <font color="darkred">Page</font> <input class="form-control" type="number"
+                                            name="page" max="1" value="1">
+                                        <font color="darkred">of</font>
+                                        <span class="total">1</span>
+                                    </div>
+                                    <div class="arrow col-auto p-0">
+                                        <div class="btn-group" role="group" aria-label="Basic example">
+
+                                            <input class="prev-page-input" type="hidden" name="prev-page" value="0">
+                                            <input class="next-page-input" type="hidden" name="next-page" value="0">
+
+                                            <button type="button" disabled="" class="btn btn-primary prev-page">
+                                                <i class="fas fa-chevron-left"></i>
+                                            </button>
+                                            <button type="button" disabled="" class="btn btn-primary next-page"><i
+                                                    class="fas fa-chevron-right "></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
                                     <button type="submit"
-                                        class="btn btn-primary sec-bg border-0 w-100 p-2">Display</button>
+                                        class="btn btn-md sec-bg border-0 white-color rounded-6 p-2 fs-18 px-4 col-auto ms-4">
+                                        <font color="darkred">Show</font>
+                                    </button>
                                 </div>
                             </div>
                         </form>
-                        <div class="row col-12 col-md-7 mb-5">
-                            <div class="col-12 col-md-9 row pe-md-0">
-                                <div class="w-50">
-                                    <div class="sec-bg block border rounded-3 row m-0 mb-2 white-color py-2">
-                                        <div
-                                            class="cardnew position-relative col col-md-12 p-0 text-center flex-column">
-                                            <p class="fs-90 fw-light my-0 lh-sm ">
-                                                5
-                                            </p>
-                                            <span>Not paid invoices</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="w-50">
-                                    <div
-                                        class="main-bg block border rounded-3 row m-0 mb-2 white-color py-2 position-relative">
-                                        <div
-                                            class="cardnew position-relative col col-md-12 p-0 text-center flex-column">
-                                            <p class="fs-90 fw-light my-0 lh-sm ">
-                                                5
-                                            </p>
-                                            <span>Not paid invoices</span>
-                                            <a class="nav-link pe-0 active position-absolute" href="#">
-                                                <svg class="icon icon-arrows-rotate-solid" width="20" height="20">
-                                                    <use xlink:href="./img/services_icons.svg#icon-arrows-rotate-solid">
-                                                    </use>
-                                                </svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <table data-toggle="table" class="classic mini-table table table-fixed"
-                            data-filter-control="true" data-pagination="true" data-pagination-parts="['pageList']"
-                            data-pagination-loop="false">
-                            <thead>
-                                <tr>
-                                    <th data-sortable="true" data-field="num" data-filter-control-placeholder="Company"
-                                        data-field="num">
-                                        Invoice Number</th>
-                                    <th data-sortable="true" data-field="Company" data-filter-control="input"
-                                        data-filter-control-placeholder="Company" data-field="Company">
-                                        Company</th>
-                                    <th data-sortable="true" data-search-on-enter-key="true" data-field="Date"
-                                        data-filter-control="input" data-filter-control-placeholder="Date"
-                                        data-field="Date">
-                                        Invoice Date</th>
-                                    <th data-sortable="true" data-field="amount" data-filter-control="input"
-                                        data-filter-control-placeholder="Total Amount" data-field="amount">
-                                        Amount</th>
-                                    <th data-sortable="true" data-field="Status" data-filter-control="input"
-                                        data-filter-control-placeholder="Status" data-field="Status">
-                                        Payment Status</th>
-                                    <th data-sortable="true" data-field="Mode" data-filter-control="input"
-                                        data-filter-control-placeholder="Mode" data-field="Mode">
-                                        Payment Mode</th>
-                                    <th data-filter-control-placeholder="buttons" data-field="buttons"
-                                        data-width="100px">
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>24</td>
-                                    <td>test</td>
-                                    <td>07.11.2022 09:07:44</td>
-                                    <td>500.0000 USD</td>
-                                    <td>Paid</td>
-                                    <td>test</td>
-                                    <td>
-                                        <button class="dropdown bootstrap-select button-grey dropdown-grey mx-auto"
-                                            type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Download invoice</a></li>
-                                            <li><a class="dropdown-item" href="#">Send reminder</a></li>
-                                            <li><a class="dropdown-item" href="#">Sync with Icount</a></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>24</td>
-                                    <td>test</td>
-                                    <td>07.11.2022 09:07:44</td>
-                                    <td>500.0000 USD</td>
-                                    <td>Paid</td>
-                                    <td>test</td>
-                                    <td>
-                                        <button class="dropdown bootstrap-select button-grey dropdown-grey mx-auto"
-                                            type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Download invoice</a></li>
-                                            <li><a class="dropdown-item" href="#">Send reminder</a></li>
-                                            <li><a class="dropdown-item" href="#">Sync with Icount</a></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>24</td>
-                                    <td>test</td>
-                                    <td>07.11.2022 09:07:44</td>
-                                    <td>500.0000 USD</td>
-                                    <td>Paid</td>
-                                    <td>test</td>
-                                    <td>
-                                        <button class="dropdown bootstrap-select button-grey dropdown-grey mx-auto"
-                                            type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Download invoice</a></li>
-                                            <li><a class="dropdown-item" href="#">Send reminder</a></li>
-                                            <li><a class="dropdown-item" href="#">Sync with Icount</a></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>24</td>
-                                    <td>test</td>
-                                    <td>07.11.2022 09:07:44</td>
-                                    <td>500.0000 USD</td>
-                                    <td>Paid</td>
-                                    <td>test</td>
-                                    <td>
-                                        <button class="dropdown bootstrap-select button-grey dropdown-grey mx-auto"
-                                            type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Download invoice</a></li>
-                                            <li><a class="dropdown-item" href="#">Send reminder</a></li>
-                                            <li><a class="dropdown-item" href="#">Sync with Icount</a></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>24</td>
-                                    <td>test</td>
-                                    <td>07.11.2022 09:07:44</td>
-                                    <td>500.0000 USD</td>
-                                    <td>Paid</td>
-                                    <td>test</td>
-                                    <td>
-                                        <button class="dropdown bootstrap-select button-grey dropdown-grey mx-auto"
-                                            type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Download invoice</a></li>
-                                            <li><a class="dropdown-item" href="#">Send reminder</a></li>
-                                            <li><a class="dropdown-item" href="#">Sync with Icount</a></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>24</td>
-                                    <td>test</td>
-                                    <td>07.11.2022 09:07:44</td>
-                                    <td>500.0000 USD</td>
-                                    <td>Paid</td>
-                                    <td>test</td>
-                                    <td>
-                                        <button class="dropdown bootstrap-select button-grey dropdown-grey mx-auto"
-                                            type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Download invoice</a></li>
-                                            <li><a class="dropdown-item" href="#">Send reminder</a></li>
-                                            <li><a class="dropdown-item" href="#">Sync with Icount</a></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
                     </div>
                 </div>
             </div>
