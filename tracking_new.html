@@ -226,7 +226,12 @@
                                                     </span></div>
                                                 <div class="progress-bar" role="progressbar" style="width: 0%"
                                                     aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><span
-                                                        class="status-tracking">Delivered
+                                                        class="status-tracking">Delivered<a href="javascript:;"
+                                                            id="upload-receipts-modal" data-boid="5"
+                                                            data-bs-toggle="modal" data-bs-target="#uploadReceipts"
+                                                            data-bs-dismiss="modal" aria-label="Close">
+                                                            Upload Receipts
+                                                        </a>
                                                         <span class="date"></span>
                                                     </span></div>
                                             </div>
@@ -325,6 +330,53 @@
         </div>
     </div>
     </div>
+    </div>
+    <div class="modal fade" id="uploadReceipts" tabindex="-1" aria-modal="true" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-0 py-0 p-md-3 py-md-2 pb-md-3">
+                <div class="modal-body row m-0 p-0">
+                    <div class=" row m-0 py-4 py-lg-2">
+                        <button type="button"
+                            class="btn-close opacity-1 align-top  ms-auto col-auto position-absolute  top-0 end-0"
+                            data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div>
+                            <div class="row m-0 m-md-3 mt-4">
+                                <div class="col-12 my-0">
+                                    <p class="black-color fw-bold text-center fs-18">
+                                        Please upload your bank account transfer receipts here
+                                    </p>
+                                </div>
+                                <div class="col-12 row m-0 mt-2 d-flex justify-content-center p-0 align-items-center">
+                                    <form action="?Controller=Selfbilling&amp;Action=Tracking&amp;uploadReceipts=1"
+                                        id="upload-receipts-form" method="POST" enctype="multipart/form-data">
+                                        <input type="hidden" class="form-control py-2 px-2" id="upload-receipts-boid"
+                                            name="upload-receipts-boid" required="" value="5">
+
+                                        <!-- <input type="file" class="form-control py-2 px-2" id="upload-receipts"
+                                            name="upload-receipts" accept="application/pdf, image/*" required=""> -->
+                                        <div class="drop-zone">
+                                            <span class="drop-zone__prompt"><svg
+                                                    class="icon icon-upload-cloud d-block mx-auto" width="32"
+                                                    height="32">
+                                                    <use href="./img/services_icons.svg#icon-upload-cloud"></use>
+                                                </svg>
+                                                Drop file here or click to upload</span>
+                                            <input type="file" class="drop-zone__input" id="upload-receipts"
+                                                name="upload-receipts" accept="application/pdf, image/*" required="">
+                                        </div>
+                                        <button type="submit"
+                                            class="btn col-auto my-2 py-2 px-5 rounded-1  sec-bg white-color fs-18 yes-sure-remove-invoice-item">Yes
+                                            I'm sure</button>
+                                        <a type="submit" data-bs-dismiss="modal" aria-label="Close"
+                                            class="fs-18 rounded-1 col-auto px-5 color-lgrey2">Cancel</a>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
