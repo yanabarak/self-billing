@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystery Shopping reviews</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/my108.css">
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://use.fontawesome.com/releases/v5.11.1/css/all.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+    <link rel="stylesheet" href="css/bootstrap-table.min.css">
+
+    <link rel="stylesheet" href="css/classic.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/classic.date.css" media="print" onload="this.media='all'">
+</head>
+
+<body class="overflow-hidden ai-assistance">
+    <div class="container">
+        <div class="row mb-5">
+            <h2 class="text-center black-color ">Do you need Al assistance, <span class="text-blue ">Ask me
+                    Anything?</span></h2>
+            <p class="fs-16 text-center col-12 col-lg-7 mx-auto">Our system has trained an intelligent Al chatbot based
+                on the
+                responses.
+                Use
+                this chatbot to ask Al-style questions on
+                your response data.</p>
+        </div>
+        <div class="row mb-5">
+            <div class="question-1 checkbox-group">
+                <div class="list-group-item col">
+                    <input class="form-check-input m-0" type="checkbox" value="" aria-label="..." name="question-1"
+                        id="question-1-1">
+                    <label for="question-1-1">Write an executive summary of the survey responses</label>
+                </div>
+                <div class="list-group-item col">
+                    <input class="form-check-input m-0" type="checkbox" value="" aria-label="..." name="question-1"
+                        id="question-1-1">
+                    <label for="question-1-1">Generate short actionable insight</label>
+                </div>
+                <div class="list-group-item col">
+                    <input class="form-check-input m-0" type="checkbox" value="" aria-label="..." name="question-1"
+                        id="question-1-1">
+                    <label for="question-1-1">Write overall summary</label>
+                </div>
+                <div class="list-group-item col">
+                    <input class="form-check-input m-0" type="checkbox" value="" aria-label="..." name="question-1"
+                        id="question-1-1">
+                    <label for="question-1-1">Write the sentiment analysis type?</label>
+                </div>
+                <div class="list-group-item col">
+                    <input class="form-check-input m-0" type="checkbox" value="" aria-label="..." name="question-1"
+                        id="question-1-1">
+                    <label for="question-1-1">Write a short summary</label>
+                </div>
+                <div class="list-group-item col">
+                    <input class="form-check-input m-0" type="checkbox" value="" aria-label="..." name="question-1"
+                        id="question-1-1">
+                    <label for="question-1-1">List the top and low factor mentioned in report?</label>
+                </div>
+                <div class="list-group-item col">
+                    <input class="form-check-input m-0" type="checkbox" value="" aria-label="..." name="question-1"
+                        id="question-1-1">
+                    <label for="question-1-1">Write follow-up action</label>
+                </div>
+
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="question-2">
+                <label for="question-2" class="mb-2 fs-16">Ask your question?
+                    <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M10.2801 2.31379L7.85256 0L7.13266 0.686197L9.0511 2.5148H0V3.48524H9.05108L7.13266 5.31377L7.85256 6L11 3.00002L10.2801 2.31379Z"
+                            fill="#414141" />
+                    </svg></label>
+                <div class="row gap-3 m-0">
+                    <textarea class="form-control textarea-blue border-0 col" id="question-2"></textarea>
+                    <button class="btn col-12 col-md-auto blue-button-send">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17.3521 16.4986C17.9689 16.4523 17.9689 15.5477 17.3521 15.5014L3.12935 14.4347C2.86845 14.4151 2.66675 14.1977 2.66675 13.9361V4.77329C2.66675 4.41046 3.04106 4.16844 3.37193 4.31733L28.3202 15.544C28.7133 15.7209 28.7133 16.2791 28.3202 16.456L3.37193 27.6827C3.04106 27.8316 2.66675 27.5895 2.66675 27.2267V18.0639C2.66675 17.8023 2.86845 17.5849 3.12935 17.5653L17.3521 16.4986Z"
+                                fill="white" />
+                        </svg></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-12 mb-4">
+                <p class="black-color fw-bold fs-18 d-flex gap-2"><svg width="25" height="25" viewBox="0 0 25 25"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12.5 25C14.9723 25 17.389 24.2669 19.4446 22.8934C21.5002 21.5199 23.1024 19.5676 24.0485 17.2835C24.9946 14.9995 25.2421 12.4861 24.7598 10.0614C24.2775 7.63661 23.087 5.40933 21.3388 3.66117C19.5907 1.91301 17.3634 0.722505 14.9386 0.24019C12.5139 -0.242126 10.0005 0.00541604 7.71646 0.951511C5.43238 1.89761 3.48015 3.49976 2.10663 5.55538C0.733112 7.61099 0 10.0277 0 12.5C0 15.8152 1.31696 18.9946 3.66116 21.3388C6.00537 23.683 9.18479 25 12.5 25ZM10.7143 6.25C10.7143 5.7764 10.9024 5.3222 11.2373 4.98731C11.5722 4.65243 12.0264 4.46429 12.5 4.46429C12.9736 4.46429 13.4278 4.65243 13.7627 4.98731C14.0976 5.3222 14.2857 5.7764 14.2857 6.25V7.14286C14.2857 7.61646 14.0976 8.07067 13.7627 8.40555C13.4278 8.74044 12.9736 8.92858 12.5 8.92858C12.0264 8.92858 11.5722 8.74044 11.2373 8.40555C10.9024 8.07067 10.7143 7.61646 10.7143 7.14286V6.25ZM10.7143 11.6071C10.7143 11.1335 10.9024 10.6793 11.2373 10.3445C11.5722 10.0096 12.0264 9.82143 12.5 9.82143C12.9736 9.82143 13.4278 10.0096 13.7627 10.3445C14.0976 10.6793 14.2857 11.1335 14.2857 11.6071V18.75C14.2857 19.2236 14.0976 19.6778 13.7627 20.0127C13.4278 20.3476 12.9736 20.5357 12.5 20.5357C12.0264 20.5357 11.5722 20.3476 11.2373 20.0127C10.9024 19.6778 10.7143 19.2236 10.7143 18.75V11.6071Z"
+                            fill="#007BFF" />
+                    </svg>
+                    Place in the alerts</p>
+            </div>
+            <div class="question-3 row scrollable-checkbox" data-count="11">
+                <div class="col-12 col-md-6 d-flex align-items-center gap-3 mb-3">
+                    <input class="form-check-input m-0" type="checkbox" value="" aria-label="..." name="question-1"
+                        id="question-1-1">
+                    <label for="question-1-1">Alert1</label>
+                </div>
+                <div class="col-12 col-md-6 d-flex align-items-center gap-3 mb-3">
+                    <input class="form-check-input m-0" type="checkbox" value="" aria-label="..." name="question-1"
+                        id="question-1-1">
+                    <label for="question-1-1">Alert2</label>
+                </div>
+                <div class="col-12 col-md-6 d-flex align-items-center gap-3 mb-3">
+                    <input class="form-check-input m-0" type="checkbox" value="" aria-label="..." name="question-1"
+                        id="question-1-1">
+                    <label for="question-1-1">Alert3</label>
+                </div>
+                <div class="col-12 col-md-6 d-flex align-items-center gap-3 mb-3">
+                    <input class="form-check-input m-0" type="checkbox" value="" aria-label="..." name="question-1"
+                        id="question-1-1">
+                    <label for="question-1-1">Alert4</label>
+                </div>
+                <div class="col-12 col-md-6 d-flex align-items-center gap-3 mb-3">
+                    <input class="form-check-input m-0" type="checkbox" value="" aria-label="..." name="question-1"
+                        id="question-1-1">
+                    <label for="question-1-1">Alert5</label>
+                </div>
+                <div class="col-12 col-md-6 d-flex align-items-center gap-3 mb-3">
+                    <input class="form-check-input m-0" type="checkbox" value="" aria-label="..." name="question-1"
+                        id="question-1-1">
+                    <label for="question-1-1">Alert6</label>
+                </div>
+                <div class="col-12 col-md-6 d-flex align-items-center gap-3 mb-3">
+                    <input class="form-check-input m-0" type="checkbox" value="" aria-label="..." name="question-1"
+                        id="question-1-1">
+                    <label for="question-1-1">Alert7</label>
+                </div>
+
+                <div class="col-12 col-md-6 d-flex align-items-center gap-3 mb-3">
+                    <input class="form-check-input m-0" type="checkbox" value="" aria-label="..." name="question-1"
+                        id="question-1-1">
+                    <label for="question-1-1">Alert8</label>
+                </div>
+                <div class="col-12 col-md-6 d-flex align-items-center gap-3 mb-3">
+                    <input class="form-check-input m-0" type="checkbox" value="" aria-label="..." name="question-1"
+                        id="question-1-1">
+                    <label for="question-1-1">Alert9</label>
+                </div>
+                <div class="col-12 col-md-6 d-flex align-items-center gap-3 mb-3">
+                    <input class="form-check-input m-0" type="checkbox" value="" aria-label="..." name="question-1"
+                        id="question-1-1">
+                    <label for="question-1-1">Alert10</label>
+                </div>
+                <div class="col-12 col-md-6 d-flex align-items-center gap-3 mb-3">
+                    <input class="form-check-input m-0" type="checkbox" value="" aria-label="..." name="question-1"
+                        id="question-1-1">
+                    <label for="question-1-1">Alert11</label>
+                </div>
+                <div class="col-12 col-md-6 d-flex align-items-center gap-3 mb-3">
+                    <input class="form-check-input m-0" type="checkbox" value="" aria-label="..." name="question-1"
+                        id="question-1-1">
+                    <label for="question-1-1">Alert12</label>
+                </div>
+                <div class="col-12 col-md-6 d-flex align-items-center gap-3 mb-3">
+                    <input class="form-check-input m-0" type="checkbox" value="" aria-label="..." name="question-1"
+                        id="question-1-1">
+                    <label for="question-1-1">Alert13</label>
+                </div>
+                <div class="col-12 col-md-6 d-flex align-items-center gap-3 mb-3">
+                    <input class="form-check-input m-0" type="checkbox" value="" aria-label="..." name="question-1"
+                        id="question-1-1">
+                    <label for="question-1-1">Alert14</label>
+                </div>
+                <div class="col-12 col-md-6 d-flex align-items-center gap-3 mb-3">
+                    <input class="form-check-input m-0" type="checkbox" value="" aria-label="..." name="question-1"
+                        id="question-1-1">
+                    <label for="question-1-1">Alert15</label>
+                </div>
+            </div>
+        </div>
+        <div class="row my-4">
+            <hr>
+        </div>
+        <div class="row mb-5">
+            <div class="col-12 col-md-6">
+                <div class="col-12 mb-4">
+                    <p class="black-color fw-bold fs-18 d-flex gap-2">
+                        <svg width="20" height="25" viewBox="0 0 20 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.8516 3.04631V0H2.45877C1.10083 0 0 0.978757 0 2.18611V22.8139C0 24.0212 1.10083 25 2.45877 25H17.1265C18.4844 25 19.5853 24.0212 19.5853 22.8139V5.09785H16.159C14.8868 5.09785 13.8516 4.17753 13.8516 3.04631ZM15.4081 18.5552H4.17745C4.05948 18.5552 3.96386 18.4703 3.96386 18.3654V17.6439C3.96386 17.539 4.05948 17.454 4.17745 17.454H15.4081C15.526 17.454 15.6216 17.539 15.6216 17.6439V18.3654C15.6216 18.4703 15.526 18.5552 15.4081 18.5552ZM15.4081 14.4233H4.17745C4.05948 14.4233 3.96386 14.3382 3.96386 14.2333V13.5119C3.96386 13.407 4.05948 13.322 4.17745 13.322H15.4081C15.526 13.322 15.6216 13.407 15.6216 13.5119V14.2333C15.6216 14.3382 15.526 14.4233 15.4081 14.4233ZM15.4081 10.2912H4.17745C4.05948 10.2912 3.96386 10.2061 3.96386 10.1013V9.37979C3.96386 9.2749 4.05948 9.18988 4.17745 9.18988H15.4081C15.526 9.18988 15.6216 9.27497 15.6216 9.37979V10.1013C15.6216 10.2061 15.526 10.2912 15.4081 10.2912Z"
+                                fill="#007BFF" />
+                            <path
+                                d="M16.1591 3.9965H19.0238L15.0903 0.499268V3.04629C15.0903 3.57025 15.5698 3.9965 16.1591 3.9965Z"
+                                fill="#007BFF" />
+                        </svg>
+                        Place in the visit reports
+                    </p>
+                </div>
+                <div class="col-12">
+                    <div class="col-12 col-md-6 d-flex align-items-center gap-3 mb-3">
+                        <input class="form-check-input m-0" type="checkbox" value="" aria-label="..." name="question-1"
+                            id="question-1-1">
+                        <label for="question-1-1">PDF visit report</label>
+                    </div>
+                    <div class="col-12 col-md-6 d-flex align-items-center gap-3 mb-3">
+                        <input class="form-check-input m-0" type="checkbox" value="" aria-label="..." name="question-1"
+                            id="question-1-1">
+                        <label for="question-1-1">HTML visit report</label>
+                    </div>
+                    <div class="col-12 col-md-6 d-flex align-items-center gap-3 mb-3">
+                        <input class="form-check-input m-0" type="checkbox" value="" aria-label="..." name="question-1"
+                            id="question-1-1">
+                        <label for="question-1-1">Your custom visit report</label>
+                    </div>
+                    <div class="col-12 col-md-6 d-flex align-items-center gap-3 mb-3">
+                        <input class="form-check-input m-0" type="checkbox" value="" aria-label="..." name="question-1"
+                            id="question-1-1">
+                        <label for="question-1-1">Email visit report</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mt-5 mt-md-0">
+                <div class="col-12 mb-4">
+                    <p class="black-color fw-bold fs-18 d-flex gap-2">
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M18.1818 0V3.57143H6.81818V0H18.1818ZM25 5.35714H20.4545V19.6429H25V5.35714ZM4.54545 5.35714H0V19.6429H4.54545V5.35714ZM6.81818 5.35714V19.6429H18.1818V5.35714H6.81818ZM18.1818 25V21.4286H6.81818V25H18.1818ZM20.4545 21.4286V25H21.5909C22.4948 24.9992 23.3613 24.7168 24.0004 24.2146C24.6395 23.7124 24.999 23.0316 25 22.3214V21.4286H20.4545ZM20.4545 3.57143H25V2.67857C24.999 1.96841 24.6395 1.28756 24.0004 0.785397C23.3613 0.283236 22.4948 0.000779892 21.5909 0H20.4545V3.57143ZM4.54545 21.4286H0V22.3214C0.00099259 23.0316 0.360482 23.7124 0.999596 24.2146C1.63871 24.7168 2.50525 24.9992 3.40909 25H4.54545V21.4286ZM4.54545 3.57143V0H3.40909C2.50525 0.000779892 1.63871 0.283236 0.999596 0.785397C0.360482 1.28756 0.00099259 1.96841 0 2.67857V3.57143H4.54545Z"
+                                fill="#007BFF" />
+                        </svg>
+                        Where you want to place in report
+                    </p>
+                </div>
+                <div class="col-12">
+                    <div class="col-12 col-md-6 d-flex align-items-center gap-3 mb-3">
+                        <input class="form-check-input m-0" type="radio" value="" aria-label="..." name="question-5"
+                            id="question-5-1">
+                        <label for="question-5-1">Top</label>
+                    </div>
+                    <div class="col-12 col-md-6 d-flex align-items-center gap-3 mb-3">
+                        <input class="form-check-input m-0" type="radio" value="" aria-label="..." name="question-5"
+                            id="question-5-2">
+                        <label for="question-5-2">End of the report</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-4">
+            <hr>
+        </div>
+        <div class="row mb-5">
+
+            <div class="col-12">
+                <div class="col-12 mb-4">
+                    <p class="black-color fw-bold fs-18 d-flex gap-2">
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.233 11.5H1.267C0.56725 11.5 0 10.9327 0 10.233V1.267C0 0.56725 0.56725 0 1.267 0H10.2332C10.9327 0 11.5 0.56725 11.5 1.267V10.2332C11.5 10.9327 10.9327 11.5 10.233 11.5Z"
+                                fill="#007BFF" />
+                            <path
+                                d="M23.733 11.5H14.767C14.0673 11.5 13.5 10.9327 13.5 10.233V1.267C13.5 0.56725 14.0673 0 14.767 0H23.7332C24.4327 0 25 0.56725 25 1.267V10.2332C25 10.9327 24.4327 11.5 23.733 11.5Z"
+                                fill="#007BFF" />
+                            <path
+                                d="M10.233 25H1.267C0.56725 25 0 24.4327 0 23.733V14.767C0 14.0673 0.56725 13.5 1.267 13.5H10.2332C10.9327 13.5 11.5 14.0673 11.5 14.767V23.7332C11.5 24.4327 10.9327 25 10.233 25Z"
+                                fill="#007BFF" />
+                            <path
+                                d="M23.733 25H14.767C14.0673 25 13.5 24.4327 13.5 23.733V14.767C13.5 14.0673 14.0673 13.5 14.767 13.5H23.7332C24.433 13.5 25.0002 14.0673 25.0002 14.767V23.7332C25 24.4327 24.4327 25 23.733 25Z"
+                                fill="#007BFF" />
+                        </svg>
+                        Do you want to run Al on old filled report
+                    </p>
+                </div>
+                <div class="col-12">
+                    <div class="col-12 col-md-6 d-flex align-items-center gap-3 mb-3">
+                        <input class="form-check-input m-0" type="radio" value="" aria-label="..." name="question-6"
+                            id="question-6-1">
+                        <label for="question-6-1">Yes</label>
+                    </div>
+                    <div class="col-12 col-md-6 d-flex align-items-center gap-3 mb-3">
+                        <input class="form-check-input m-0" type="radio" value="" aria-label="..." name="question-6"
+                            id="question-6-2">
+                        <label for="question-6-2">No</label>
+                    </div>
+                    <div class="row col-12 col-md-6">
+                        <label for="pick-date" class="mb-2 fs-16">Date range
+                            <svg width="11" height="6" viewBox="0 0 11 6" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.2801 2.31379L7.85256 0L7.13266 0.686197L9.0511 2.5148H0V3.48524H9.05108L7.13266 5.31377L7.85256 6L11 3.00002L10.2801 2.31379Z"
+                                    fill="#414141" />
+                            </svg></label>
+                        <div class="col position-relative">
+                            <input type="text" class="form-control pick-date border-bottom" name="pick-date"
+                                placeholder="" id="pick-date">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row my-4">
+            <hr>
+        </div>
+        <div class="row justify-content-between px-3 px-md-0">
+            <button type="submit"
+                class="btn btn-md bordered-grey rounded-6 p-2 px-5 fs-18 col-auto fw-normal">Cancel</button>
+            <button type="submit"
+                class="btn btn-md sec-bg border-0 white-color rounded-6 p-2 px-5 fs-18 col-auto fw-normal">Save</button>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+
+    <script src="js/imask.js"></script>
+    <script src="js/picker.js"></script>
+    <script src="js/picker.date.js"></script>
+    <script src="js/my.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            if ($('.pick-date').length) {
+                let DateSet = window.SETTINGS
+                    ? window.SETTINGS
+                    : { formatSubmit: 'yyyy-mm-dd', editable: true };
+                DateSet['editable'] = false;
+                DateSet['today'] = '';
+                DateSet['selectYears'] = true;
+                DateSet.format = 'dd-mm-yyyy';
+                $('.pick-date').pickadate(DateSet);
+
+                // editDate();
+                // pickDate2();
+                // pickBranch();
+            }
+        })
+    </script>
+</body>
+
+</html>
