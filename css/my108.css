@@ -2016,10 +2016,6 @@ input[type='text']::placeholder,
   overflow: visible !important;
 }
 
-.ai-assistance {
-  padding-top: 97px;
-  padding-bottom: 136px;
-}
 .text-blue {
   color: #007bff;
 }
@@ -2027,6 +2023,8 @@ input[type='text']::placeholder,
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px 55px;
+  max-height: 220px;
+  overflow: auto;
 }
 
 @media (max-width: 767.5px) {
@@ -2038,7 +2036,7 @@ input[type='text']::placeholder,
   border-radius: 5px;
   background: rgba(136, 200, 244, 0.15);
   border: 0px solid;
-  padding: 25px 20px;
+  padding: 10px;
   gap: 14px;
   color: #38393b;
   font-size: 16px;
@@ -2055,6 +2053,10 @@ input[type='text']::placeholder,
 .ai-assistance label {
   color: #414141;
 }
+.ai-assistance textarea.textarea-blue {
+  min-height: unset;
+  height: unset;
+}
 .textarea-blue {
   border-radius: 5px;
   background: rgba(136, 200, 244, 0.15);
@@ -2062,16 +2064,15 @@ input[type='text']::placeholder,
 .blue-button-send {
   border-radius: 5px;
   background: #007bff;
-  min-width: 62px;
-  height: 62px;
+  min-width: 40px;
   flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .blue-button-send svg {
-  width: 32px;
-  height: 32px;
+  width: 20px;
+  height: 20px;
   margin: 0px;
 }
 .scrollable-checkbox label,
@@ -2114,7 +2115,7 @@ input[type='text']::placeholder,
 }
 @media (min-width: 1200px) {
   .ai-assistance .container {
-    max-width: 1000px;
+    max-width: 1100px;
   }
 }
 @media (max-width: 1024.5px) {
