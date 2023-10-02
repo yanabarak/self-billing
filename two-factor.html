@@ -122,8 +122,7 @@
             </h2>
             <p class="form-subtitle">Enter the code that we sent to your email. The code expires shortly, so please
                 enter it soon.</p>
-            <p class="form-countdown">
-                00:15
+            <p class="form-countdown" id="time">
             </p>
             <div class="form-code">
                 <input type="text" class="digit-input" maxlength="1">
@@ -176,6 +175,27 @@
             });
         });
 
+        function startTimer(duration) {
+            var display = document.querySelector('#time')
+            var timer = duration, minutes, seconds;
+            setInterval(function () {
+                minutes = parseInt(timer / 60, 10)
+                seconds = parseInt(timer % 60, 10);
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    timer = duration;
+                }
+            }, 1000);
+        }
+
+        window.onload = function () {
+            startTimer(60 * 5);
+        };
     </script>
 
     <!-- 
