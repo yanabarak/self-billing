@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystery Shopping reviews</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/my.css">
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://use.fontawesome.com/releases/v5.11.1/css/all.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+    <link rel="stylesheet" href="css/classic.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/classic.date.css" media="print" onload="this.media='all'">
+    <script type="text/javascript">
+        window.SETTINGS = { "monthsFull": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], "weekdaysShort": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], "today": "Today", "clear": "Clear", "close": "Close", "format": "dd-mm-yyyy", "formatSubmit": "yyyy-mm-dd" };
+    </script>
+    <link rel="stylesheet" href="css/bootstrap-table.min.css">
+</head>
+
+<body class="overflow-hidden services-dash">
+    <div class="d-flex justify-content-center position-fixed w-100 h-100 flex-column bg-white" id="spinerWrap"
+        style="z-index: 10000;">
+        <div class="spinner-border mx-auto sec-color" role="status">
+            <span class="visually-hidden">Загрузка...</span>
+        </div>
+    </div>
+
+    <div class="container-fluid  d-block d-md-none">
+        <header class="d-flex align-items-center border-bottom py-2">
+            <div class="col-2 text-start">
+                <button class="navbar-toggler navbar-toggler-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <div class="animated-hamburger"><span></span><span></span><span></span></div>
+                </button>
+            </div>
+            <div class="logo col-8 justify-content-center mb-md-0">
+                <div class="col-md-6">
+                    <img src="img/checker_logo.png" alt="Company logo" class=" me-auto d-block">
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="container-fluid">
+
+        <!-- <div class="bg-white det-info-http position-absolute toast hide bottom-0 start-0 fs-18" data-bs-autohide="false"
+            id="data-toast">
+            <div class="m-0 p-0 bg-white ">
+                <div class="toast-header px-2 border-0 pb-0">
+                    <strong class="me-auto fs-18 sec-color">Sample details</strong>
+                    <button type="button" class="btn-close sec-color" data-bs-dismiss="toast"
+                        aria-label="Close"></button>
+                </div>
+                <div class="toast-body blue-grey-scroll ">
+
+                </div>
+            </div>
+        </div> -->
+        <div class="wrapper d-flex align-items-stretch flex-column flex-md-row">
+
+            <div class="px-3 px-md-0 py-4 mx-80 w-100" id="content">
+                <div id="infoJob">
+                    <div class="row m-0 mt-5 mt-md-0 header-wrapper d-flex align-items-center fs-22">
+                        <nav style="--bs-breadcrumb-divider: '|';" aria-label="breadcrumb" class="p-0 w-auto">
+                            <ol class="breadcrumb sec-color breadcrumb-top mb-0">
+                                <li class="breadcrumb-item"><a href="#">Services</a></li>
+                                <li class="breadcrumb-item" aria-current="page">CSS implementation</li>
+                            </ol>
+                        </nav>
+                        <ul class="nav w-auto ms-auto right-nav fs-18 d-none d-md-flex">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">My cart</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Tracking</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link pe-0 active" href="#">
+                                    <svg class="icon icon-bell">
+                                        <use xlink:href="./img/services_icons.svg#icon-bell"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="nav w-auto ms-auto right-nav fs-18 d-flex d-md-none icon-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><svg class="icon icon-cart">
+                                        <use xlink:href="./img/services_icons.svg#icon-cart"></use>
+                                    </svg></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><svg class="icon icon-track">
+                                        <use xlink:href="./img/services_icons.svg#icon-track"></use>
+                                    </svg></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link pe-0" href="#">
+                                    <svg class="icon icon-bell">
+                                        <use xlink:href="./img/services_icons.svg#icon-bell"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content-wrapper m-0 p-0 mt-md-5">
+                        <form method="POST" id="pagination-form">
+
+                            <div class="row col-12 col-md-7 mt-2 mt-md-0">
+                                <div class="col-12 my-0 row mb-2">
+                                    <div class="col-3 d-flex align-items-center">
+                                        <label for="staticСompany" class="black-color fs-16">Сompany</label>
+                                    </div>
+                                    <div class="col-md-6 col-9">
+                                        <select class="form-select selectpicker " data-live-search="true"
+                                            aria-label="Сompany" id="staticСompany" title="All companies"
+                                            name="companyId">
+                                            <option value="all" selected="selected">All companies</option>
+                                            <option value="69">2nd testing system</option>
+                                            <option value="68">Checker Software Systems LTD [TESTING system]</option>
+                                            <option value="70">deleteme1</option>
+                                            <option value="71">deleteme2</option>
+                                            <option value="72">deleteme7</option>
+                                            <option value="73">test_to_del</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="col-12 my-0 row mb-2">
+                                    <div class="col-12 col-md-3 d-flex align-items-center">
+                                        <p class="black-color fs-16 m-0">Month & Year</p>
+                                    </div>
+                                    <div class="col-6 col-md-3 mb-1 mb-md-0">
+                                        <select class="form-select selectpicker " data-live-search="true"
+                                            aria-label="Month" id="staticMonth" title="Select month" name="month">
+                                            <option value="all" selected="selected">Select month</option>
+                                            <option value="01">January</option>
+                                            <option value="02">February</option>
+                                            <option value="03">March</option>
+                                            <option value="04">April</option>
+                                            <option value="05">May</option>
+                                            <option value="06">June</option>
+                                            <option value="07">July</option>
+                                            <option value="08">August</option>
+                                            <option value="09">September</option>
+                                            <option value="10">October</option>
+                                            <option value="11">November</option>
+                                            <option value="12">December</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <select class="form-select selectpicker " data-live-search="true"
+                                            aria-label="Year" id="staticYear" title="Select year" name="year">
+                                            <option value="all" selected="selected">Select year</option>
+
+                                            <option value="2023">2023</option>
+
+                                            <option value="2022">2022</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 my-0 row mb-5">
+                                    <div class="col-12 col-md-3">
+                                        <button type="submit"
+                                            class="btn btn-primary sec-bg border-0 w-100 p-2">Display</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <table data-toggle="table" class="classic mini-table table table-fixed"
+                                data-filter-control="true" data-pagination="true" data-pagination-parts="['pageList']"
+                                data-pagination-loop="false">
+                                <thead>
+                                    <tr>
+                                        <th data-sortable="false"> ID</th>
+                                        <!-- <th data-sortable="false" data-search-on-enter-key="false" data-field="Company" data-filter-control="input"
+                                                    data-filter-control-placeholder="Company" data-field="Company">
+                                                    </th>                  -->
+                                        <th data-sortable="false">CompanyID</th>
+                                        <th data-sortable="false">User name</th>
+                                        <th data-sortable="false">UserID</th>
+                                        <th data-sortable="false">IP address</th>
+                                        <th data-sortable="false"> URL</th>
+                                        <th data-sortable="false"> Category</th>
+                                        <th data-sortable="false"> Error Description</th>
+                                        <th data-sortable="false"> HttpHeaders</th>
+                                        <th data-sortable="false" data-width="100"> Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1738600</td>
+                                        <td>testing (68) </td>
+                                        <td></td>
+                                        <td>-2</td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                            <div class="wrap-anywhere">
+                                            </div>
+                                        </td>
+                                        <td>warning</td>
+                                        <td>
+                                            <div class="wrap-anywhere">
+                                                Undefined index: REQUEST_URI </div>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>2023-08-09 09:30:01</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1738599</td>
+                                        <td>testing (68) </td>
+                                        <td>oksana.soiko</td>
+                                        <td>11748</td>
+                                        <td>
+                                            5.58.147.52 </td>
+                                        <td>
+                                            <div class="wrap-anywhere">
+                                                /testing/self-billing.php?Controller=Selfbilling&Action=proceedtopay&Boid=96&GenerateInvoice=1
+                                            </div>
+                                        </td>
+                                        <td>warning</td>
+                                        <td>
+                                            <div class="wrap-anywhere">
+                                                Undefined index: boId </div>
+                                        </td>
+                                        <td>
+                                            <div class=" bg-white det-info-http position-absolute toast hide bottom-0 start-0 fs-18"
+                                                data-bs-autohide="false">
+                                                <div class="m-0 p-0 bg-white ">
+                                                    <div class="toast-header px-2 border-0 pb-0">
+                                                        <strong class="me-auto fs-18 sec-color">
+                                                            <font color=darkred>Header details</font>
+                                                        </strong>
+                                                        <button type="button" class="btn-close sec-color"
+                                                            data-bs-dismiss="toast" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="toast-body blue-grey-scroll ">
+                                                        HTTP_HOST => eu.checker-soft.com
+                                                        HTTP_ACCEPT =>
+                                                        text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+                                                        HTTP_ACCEPT_ENCODING => gzip, deflate, br
+                                                        HTTP_ACCEPT_LANGUAGE =>
+                                                        en-US,en;q=0.9,uk;q=0.8,uk-UA;q=0.7,en-AU;q=0.6,en-GB;q=0.5,es;q=0.4,de;q=0.3
+                                                        HTTP_CACHE_CONTROL => max-age=0
+                                                        HTTP_CONTENT_TYPE => application/x-www-form-urlencoded
+                                                        HTTP_COOKIE => report_property_filters=; table_rows_filters=;
+                                                        sessiontesting=sev7j6qg4uosag7j10902076a6;
+                                                        _gid=GA1.2.1213811132.1691497884;
+                                                        _fbp=fb.1.1691497884004.1479161761; _clck=8gfh54|2|fdz|0|1315;
+                                                        _ga=GA1.1.5378606.1691497884;
+                                                        _clsk=1337lte|1691497987197|6|1|u.clarity.ms/collect;
+                                                        _ga_JNKXS99566=GS1.1.1691497883.1.1.1691498218.60.0.0
+                                                        HTTP_DNT => 1
+                                                        HTTP_ORIGIN => https://eu.checker-soft.com
+                                                        HTTP_REFERER =>
+                                                        https://eu.checker-soft.com/testing/self-billing.php?Controller=Selfbilling&Action=proceedtopay&GenerateInvoice=1
+                                                        HTTP_SEC_CH_UA => "Not/A)Brand";v="99", "Google Chrome";v="115",
+                                                        "Chromium";v="115"
+                                                        HTTP_SEC_CH_UA_MOBILE => ?0
+                                                        HTTP_SEC_CH_UA_PLATFORM => "Windows"
+                                                        HTTP_SEC_FETCH_DEST => document
+                                                        HTTP_SEC_FETCH_MODE => navigate
+                                                        HTTP_SEC_FETCH_SITE => same-origin
+                                                        HTTP_SEC_FETCH_USER => ?1
+                                                        HTTP_UPGRADE_INSECURE_REQUESTS => 1
+                                                        HTTP_USER_AGENT => Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+                                                        AppleWebKit/537.36 (KHTML, like
+                                                        Gecko) Chrome/115.0.0.0 Safari/537.36
+                                                        HTTP_X_FORWARDED_FOR => 5.58.147.52
+                                                        HTTP_X_FORWARDED_PORT => 443
+                                                        HTTP_X_FORWARDED_PROTO => https
+                                                        HTTP_CONTENT_LENGTH => 19
+                                                        HTTP_CONNECTION => keep-alive
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="dd-grey show-info" href="#">Show</a>
+                                        </td>
+                                        <td>2023-08-09 12:29:22</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1738596</td>
+                                        <td>testing (68) </td>
+                                        <td></td>
+                                        <td>-2</td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                            <div class="wrap-anywhere">
+                                            </div>
+                                        </td>
+                                        <td>warning</td>
+                                        <td>
+                                            <div class="wrap-anywhere">
+                                                Undefined index: REQUEST_URI </div>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>2023-08-09 09:25:01</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1738595</td>
+                                        <td>testing (68) </td>
+                                        <td></td>
+                                        <td>-2</td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                            <div class="wrap-anywhere">
+                                            </div>
+                                        </td>
+                                        <td>warning</td>
+                                        <td>
+                                            <div class="wrap-anywhere">
+                                                Undefined index: REQUEST_URI </div>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>2023-08-09 09:20:01</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1738594</td>
+                                        <td>testing (68) </td>
+                                        <td></td>
+                                        <td>-2</td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                            <div class="wrap-anywhere">
+                                            </div>
+                                        </td>
+                                        <td>warning</td>
+                                        <td>
+                                            <div class="wrap-anywhere">
+                                                Undefined index: REQUEST_URI </div>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>2023-08-09 09:15:02</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <br>
+                            <form method="post" id="pagination-form">
+                                <div class="m-0 p-0 d-flex flex-column justify-content-end col-auto mt-0"
+                                    id="record-nav" style="margin-top: 0px !important;">
+                                    <div class="nav-group col-auto ms-auto row mb-3 me-0">
+                                        <div class="set col-auto">Show <input class="form-control" type="number"
+                                                name="show" min="1" value="5">of 287672 </div>
+                                        <div class="numb col-auto"> Page <input class="form-control" type="number"
+                                                name="page" max="57535" value="1"> of
+                                            <span class="total">57535</span>
+                                        </div>
+                                        <div class="arrow col-auto p-0">
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+
+                                                <input class="prev-page-input" type="hidden" name="prev-page" value="0">
+                                                <input class="next-page-input" type="hidden" name="next-page" value="0">
+
+                                                <button type="button" disabled class="btn btn-primary prev-page">
+                                                    <i class="fas fa-chevron-left"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-primary next-page"><i
+                                                        class="fas fa-chevron-right "></i>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <button type="submit"
+                                            class="btn btn-md sec-bg border-0 white-color rounded-6 p-2 fs-18 px-4 col-auto ms-4">
+                                            Show </button>
+                                    </div>
+                                </div>
+                            </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <style>
+        .td-wrap {
+            word-wrap: anywhere;
+        }
+    </style>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/imask.js"></script>
+    <script src="js/picker.js"></script>
+    <script src="js/picker.date.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/bootstrap-table.min.js"></script>
+    <script src="js/bootstrap-table-filter-control.min.js"></script>
+    <script src="js/my108.js"></script>
+</body>
+
+</html>

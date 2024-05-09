@@ -109,6 +109,10 @@
             font-size: 12px;
             color: #5A5A5A;
         }
+
+        a.disabled {
+            pointer-events: none;
+        }
     </style>
 </head>
 
@@ -133,7 +137,7 @@
                 <input type="text" class="digit-input" maxlength="1">
             </div>
             <button class="form-confirm">Confirm code</button>
-            <a href="" class="form-resend">Resend code</a>
+            <a href="" class="form-resend disabled" id="resend-btn">Resend code</a>
             <p class="form-small"><b>Can’t find you code?</b>Check your spam folder</p>
         </form>
     </div>
@@ -178,7 +182,7 @@
         function startTimer(duration) {
             var display = document.querySelector('#time')
             var timer = duration, minutes, seconds;
-            setInterval(function () {
+            let timInt = setInterval(function () {
                 minutes = parseInt(timer / 60, 10)
                 seconds = parseInt(timer % 60, 10);
 
@@ -188,13 +192,16 @@
                 display.textContent = minutes + ":" + seconds;
 
                 if (--timer < 0) {
-                    timer = duration;
+                    display.textContent = "00:00";
+                    clearInterval(timInt);
+                    document.getElementById('resend-btn').classList.remove("disabled");
+                    timer = 0;
                 }
             }, 1000);
         }
 
         window.onload = function () {
-            startTimer(60 * 5);
+            startTimer(10);
         };
     </script>
 
